@@ -62,13 +62,12 @@
 		FC25411524A31DEA006363CC /* CineMix */ = {
 			isa = PBXGroup;
 			children = (
+				FC25413124A329DC006363CC /* View */,
+				FC25413224A32A20006363CC /* Controller */,
+				FC25412C24A31EF4006363CC /* Utilities */,
 				FC25411624A31DEA006363CC /* AppDelegate.swift */,
 				FC25411824A31DEA006363CC /* SceneDelegate.swift */,
-				FC25411A24A31DEA006363CC /* ViewController.swift */,
-				FC25411C24A31DEA006363CC /* Main.storyboard */,
-				FC25412C24A31EF4006363CC /* Utilities */,
 				FC25411F24A31DEB006363CC /* Assets.xcassets */,
-				FC25412124A31DEB006363CC /* LaunchScreen.storyboard */,
 				FC25412424A31DEB006363CC /* Info.plist */,
 				FC25412A24A31E45006363CC /* Config.plist */,
 				FC25412F24A3263B006363CC /* README.md */,
@@ -82,6 +81,23 @@
 				FC25412D24A31F2F006363CC /* Config.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FC25413124A329DC006363CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC25412124A31DEB006363CC /* LaunchScreen.storyboard */,
+				FC25411C24A31DEA006363CC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC25413224A32A20006363CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC25411A24A31DEA006363CC /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
