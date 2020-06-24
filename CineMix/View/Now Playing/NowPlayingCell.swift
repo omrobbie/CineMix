@@ -50,8 +50,8 @@ extension NowPlayingCell: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: nibName, for: indexPath) as! NowPlayingItem
 
-        if let item = data?.results {
-            cell.txtLabel.text = item[indexPath.row].title
+        if let item = data?.results?[indexPath.row] {
+            cell.parseData(item: item)
         }
 
         return cell
@@ -59,6 +59,12 @@ extension NowPlayingCell: UICollectionViewDelegate, UICollectionViewDataSource, 
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = contentView.bounds.width
-        return CGSize(width: width, height: 300)
+        return CGSize(width: width, height: 240)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let item = data?.results?[indexPath.row] {
+            print(item.title ?? "")
+        }
     }
 }

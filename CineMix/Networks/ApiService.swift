@@ -17,5 +17,35 @@ struct ApiService {
     }()
 
     internal let BASE_URL = "https://api.themoviedb.org/3/movie/"
+    internal let IMAGE_URL = "https://image.tmdb.org/t/p/"
+
     internal let NOW_PLAYING = "now_playing"
+}
+
+// MARK: - Download image
+extension ApiService {
+
+    enum ImageSize: String {
+        case tiny = "w45"
+        case small = "w92"
+        case large = "w500"
+        case original = "original"
+    }
+
+    func downloadImage(path: String, size: ImageSize = .small, completion: @escaping (Data) -> ()) {
+        guard let url = URL(string: IMAGE_URL + size.rawValue + path) else {return}
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+
+            if let data = data {
+                DispatchQueue.main.async {
+                    completion(data)
+                }
+            }
+        }.resume()
+    }
 }

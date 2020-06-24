@@ -19,17 +19,42 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrA-gF-toc">
                         <rect key="frame" x="8" y="8" width="289" height="154"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vB-1E-MyF">
-                                <rect key="frame" x="123.5" y="66.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eM7-FG-Yb9">
+                                <rect key="frame" x="0.0" y="-3" width="289" height="160.5"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkY-Ro-RTW">
+                                <rect key="frame" x="0.0" y="98" width="289" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vB-1E-MyF">
+                                        <rect key="frame" x="20" y="18.5" width="28.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="4vB-1E-MyF" firstAttribute="leading" secondItem="OkY-Ro-RTW" secondAttribute="leading" constant="20" id="ENd-0a-kqf"/>
+                                    <constraint firstItem="4vB-1E-MyF" firstAttribute="centerY" secondItem="OkY-Ro-RTW" secondAttribute="centerY" id="Gcp-lA-ABQ"/>
+                                    <constraint firstAttribute="height" constant="56" id="oFb-s7-hRq"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lSI-RI-zNY">
+                                <rect key="frame" x="126" y="58.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4vB-1E-MyF" firstAttribute="centerY" secondItem="nrA-gF-toc" secondAttribute="centerY" id="VFN-NP-1M7"/>
-                            <constraint firstItem="4vB-1E-MyF" firstAttribute="centerX" secondItem="nrA-gF-toc" secondAttribute="centerX" id="dqb-ke-jXq"/>
+                            <constraint firstItem="lSI-RI-zNY" firstAttribute="centerX" secondItem="nrA-gF-toc" secondAttribute="centerX" id="31e-Sm-jkG"/>
+                            <constraint firstAttribute="trailing" secondItem="eM7-FG-Yb9" secondAttribute="trailing" id="5iX-wc-MNs"/>
+                            <constraint firstAttribute="bottom" secondItem="eM7-FG-Yb9" secondAttribute="bottom" id="6X1-Jg-Tkg"/>
+                            <constraint firstItem="eM7-FG-Yb9" firstAttribute="top" secondItem="nrA-gF-toc" secondAttribute="top" id="6YU-SS-pOT"/>
+                            <constraint firstItem="lSI-RI-zNY" firstAttribute="centerY" secondItem="nrA-gF-toc" secondAttribute="centerY" id="Dvx-TZ-8Yo"/>
+                            <constraint firstItem="eM7-FG-Yb9" firstAttribute="leading" secondItem="nrA-gF-toc" secondAttribute="leading" id="JlP-Kb-9pE"/>
+                            <constraint firstItem="OkY-Ro-RTW" firstAttribute="leading" secondItem="nrA-gF-toc" secondAttribute="leading" id="Nwg-an-Frr"/>
+                            <constraint firstAttribute="bottom" secondItem="OkY-Ro-RTW" secondAttribute="bottom" id="bbA-7D-UeK"/>
+                            <constraint firstAttribute="trailing" secondItem="OkY-Ro-RTW" secondAttribute="trailing" id="q0K-oQ-iaV"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -43,9 +68,14 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="305" height="170"/>
             <connections>
-                <outlet property="txtLabel" destination="4vB-1E-MyF" id="t5h-pI-I2Z"/>
+                <outlet property="imgBackdrop" destination="eM7-FG-Yb9" id="4UF-sX-zA0"/>
+                <outlet property="imgBackdropIndicator" destination="lSI-RI-zNY" id="3hj-EL-jDF"/>
+                <outlet property="txtTitle" destination="4vB-1E-MyF" id="t5h-pI-I2Z"/>
             </connections>
-            <point key="canvasLocation" x="65.94202898550725" y="53.571428571428569"/>
+            <point key="canvasLocation" x="65.94202898550725" y="55.580357142857139"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>
+    </resources>
 </document>

@@ -34,7 +34,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: nibNowPlaying) as! NowPlayingCell
-        tableView.rowHeight  = 360
+        tableView.rowHeight  = 290
         return cell
     }
 }
