@@ -23,7 +23,7 @@ class NowPlayingItem: UICollectionViewCell {
         guard let path = path else {return}
 
         imgBackdropIndicator.startAnimating()
-        ApiService.shared.downloadImage(path: path, size: .large) { (data) in
+        ApiService.shared.downloadImage(path: path) { (data) in
             self.imgBackdrop.image = UIImage(data: data)
             self.imgBackdrop.contentMode = .scaleAspectFill
             self.imgBackdropIndicator.stopAnimating()

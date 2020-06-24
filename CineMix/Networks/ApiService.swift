@@ -32,7 +32,7 @@ extension ApiService {
         case original = "original"
     }
 
-    func downloadImage(path: String, size: ImageSize = .small, completion: @escaping (Data) -> ()) {
+    func downloadImage(path: String, size: ImageSize = .large, completion: @escaping (Data) -> ()) {
         guard let url = URL(string: IMAGE_URL + size.rawValue + path) else {return}
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in

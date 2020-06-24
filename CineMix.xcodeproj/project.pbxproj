@@ -27,6 +27,7 @@
 		FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414724A368DA006363CC /* MovieListDelegate.swift */; };
 		FC25414A24A36DE8006363CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414924A36DE8006363CC /* Constants.swift */; };
 		FC25414C24A37141006363CC /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414B24A37141006363CC /* MovieDetailVC.swift */; };
+		FC25415024A37D56006363CC /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414F24A37D56006363CC /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FC25414724A368DA006363CC /* MovieListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListDelegate.swift; sourceTree = "<group>"; };
 		FC25414924A36DE8006363CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC25414B24A37141006363CC /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
+		FC25414F24A37D56006363CC /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				FC25412D24A31F2F006363CC /* Config.swift */,
 				FC25414924A36DE8006363CC /* Constants.swift */,
+				FC25414F24A37D56006363CC /* DateFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				FC25414C24A37141006363CC /* MovieDetailVC.swift in Sources */,
 				FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */,
 				FC25413624A32D30006363CC /* NowPlayingCell.swift in Sources */,
+				FC25415024A37D56006363CC /* DateFormatter.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
 				FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */,
 				FC25414124A342FC006363CC /* ApiService.swift in Sources */,
