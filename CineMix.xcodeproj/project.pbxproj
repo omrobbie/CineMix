@@ -25,6 +25,7 @@
 		FC25414324A34488006363CC /* NowPlayingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414224A34488006363CC /* NowPlayingService.swift */; };
 		FC25414524A365FD006363CC /* MovieListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414424A365FD006363CC /* MovieListVC.swift */; };
 		FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414724A368DA006363CC /* MovieListDelegate.swift */; };
+		FC25414A24A36DE8006363CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414924A36DE8006363CC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FC25414224A34488006363CC /* NowPlayingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingService.swift; sourceTree = "<group>"; };
 		FC25414424A365FD006363CC /* MovieListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListVC.swift; sourceTree = "<group>"; };
 		FC25414724A368DA006363CC /* MovieListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListDelegate.swift; sourceTree = "<group>"; };
+		FC25414924A36DE8006363CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,7 @@
 				FC25413224A32A20006363CC /* Controller */,
 				FC25414624A368B7006363CC /* Protocols */,
 				FC25413F24A342DC006363CC /* Networks */,
-				FC25412C24A31EF4006363CC /* Utilities */,
+				FC25412C24A31EF4006363CC /* Helpers */,
 				FC25411624A31DEA006363CC /* AppDelegate.swift */,
 				FC25411824A31DEA006363CC /* SceneDelegate.swift */,
 				FC25411F24A31DEB006363CC /* Assets.xcassets */,
@@ -96,12 +98,13 @@
 			path = CineMix;
 			sourceTree = "<group>";
 		};
-		FC25412C24A31EF4006363CC /* Utilities */ = {
+		FC25412C24A31EF4006363CC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				FC25412D24A31F2F006363CC /* Config.swift */,
+				FC25414924A36DE8006363CC /* Constants.swift */,
 			);
-			path = Utilities;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FC25413124A329DC006363CC /* View */ = {
@@ -245,6 +248,7 @@
 				FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */,
 				FC25414124A342FC006363CC /* ApiService.swift in Sources */,
 				FC25411924A31DEA006363CC /* SceneDelegate.swift in Sources */,
+				FC25414A24A36DE8006363CC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

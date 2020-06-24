@@ -15,8 +15,6 @@ class NowPlayingCell: UITableViewCell {
 
     var delegate: MovieListDelegate?
 
-    private let nibName = "NowPlayingItem"
-
     private var data: Movie?
 
     override func awakeFromNib() {
@@ -28,7 +26,7 @@ class NowPlayingCell: UITableViewCell {
     private func setupList() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: nibName)
+        collectionView.register(UINib(nibName: Nib.nowPlayingItem, bundle: nil), forCellWithReuseIdentifier: Nib.nowPlayingItem)
     }
 
     private func fetchData() {
@@ -50,7 +48,7 @@ extension NowPlayingCell: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: nibName, for: indexPath) as! NowPlayingItem
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Nib.nowPlayingItem, for: indexPath) as! NowPlayingItem
 
         if let item = data?.results?[indexPath.row] {
             cell.parseData(item: item)
