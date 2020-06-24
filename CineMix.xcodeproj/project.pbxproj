@@ -26,6 +26,7 @@
 		FC25414524A365FD006363CC /* MovieListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414424A365FD006363CC /* MovieListVC.swift */; };
 		FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414724A368DA006363CC /* MovieListDelegate.swift */; };
 		FC25414A24A36DE8006363CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414924A36DE8006363CC /* Constants.swift */; };
+		FC25414C24A37141006363CC /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414B24A37141006363CC /* MovieDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		FC25414424A365FD006363CC /* MovieListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListVC.swift; sourceTree = "<group>"; };
 		FC25414724A368DA006363CC /* MovieListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListDelegate.swift; sourceTree = "<group>"; };
 		FC25414924A36DE8006363CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FC25414B24A37141006363CC /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				FC25411A24A31DEA006363CC /* HomeVC.swift */,
 				FC25414424A365FD006363CC /* MovieListVC.swift */,
+				FC25414B24A37141006363CC /* MovieDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
 				FC25414524A365FD006363CC /* MovieListVC.swift in Sources */,
 				FC25413E24A342C8006363CC /* Movie.swift in Sources */,
+				FC25414C24A37141006363CC /* MovieDetailVC.swift in Sources */,
 				FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */,
 				FC25413624A32D30006363CC /* NowPlayingCell.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,

@@ -102,7 +102,7 @@
         <!--Movie Detail-->
         <scene sceneID="KuF-Lx-XKC">
             <objects>
-                <viewController id="ADO-Ln-O3D" sceneMemberID="viewController">
+                <viewController id="ADO-Ln-O3D" customClass="MovieDetailVC" customModule="CineMix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VKs-qk-puu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

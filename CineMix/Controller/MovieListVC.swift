@@ -12,8 +12,11 @@ class MovieListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var type: MovieType?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = type?.rawValue
         setupList()
     }
 

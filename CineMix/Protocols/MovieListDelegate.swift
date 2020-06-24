@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum MovieType {
-    case nowPlaying
-    case upComing
-    case topRated
-    case popular
+enum MovieType: String {
+    case nowPlaying = "Now Playing"
+    case upComing = "Upcoming"
+    case topRated = "Top Rated"
+    case popular = "Popular"
 }
 
 protocol MovieListDelegate {

@@ -42,19 +42,21 @@ extension HomeVC: MovieListDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.toMovieList {
-
+            let vc = segue.destination as! MovieListVC
+            vc.type = sender as? MovieType
         }
 
-        if segue.identifier == Segue.toMovieList {
-
+        if segue.identifier == Segue.toMovieDetail {
+            let vc = segue.destination as! MovieDetailVC
+            vc.data = sender as? MovieResult
         }
     }
 
     func seeAllMovies(type: MovieType) {
-        performSegue(withIdentifier: Segue.toMovieList, sender: self)
+        performSegue(withIdentifier: Segue.toMovieList, sender: type)
     }
 
     func movieDetail(item: MovieResult) {
-        performSegue(withIdentifier: Segue.toMovieDetail, sender: self)
+        performSegue(withIdentifier: Segue.toMovieDetail, sender: item)
     }
 }
