@@ -20,6 +20,9 @@
 		FC25413724A32D30006363CC /* NowPlayingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC25413524A32D30006363CC /* NowPlayingCell.xib */; };
 		FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25413824A32FC3006363CC /* NowPlayingItem.swift */; };
 		FC25413B24A32FC3006363CC /* NowPlayingItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC25413924A32FC3006363CC /* NowPlayingItem.xib */; };
+		FC25413E24A342C8006363CC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25413D24A342C8006363CC /* Movie.swift */; };
+		FC25414124A342FC006363CC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414024A342FC006363CC /* ApiService.swift */; };
+		FC25414324A34488006363CC /* NowPlayingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414224A34488006363CC /* NowPlayingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		FC25413524A32D30006363CC /* NowPlayingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingCell.xib; sourceTree = "<group>"; };
 		FC25413824A32FC3006363CC /* NowPlayingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingItem.swift; sourceTree = "<group>"; };
 		FC25413924A32FC3006363CC /* NowPlayingItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NowPlayingItem.xib; sourceTree = "<group>"; };
+		FC25413D24A342C8006363CC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FC25414024A342FC006363CC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FC25414224A34488006363CC /* NowPlayingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +76,10 @@
 		FC25411524A31DEA006363CC /* CineMix */ = {
 			isa = PBXGroup;
 			children = (
+				FC25413C24A342A0006363CC /* Model */,
 				FC25413124A329DC006363CC /* View */,
 				FC25413224A32A20006363CC /* Controller */,
+				FC25413F24A342DC006363CC /* Networks */,
 				FC25412C24A31EF4006363CC /* Utilities */,
 				FC25411624A31DEA006363CC /* AppDelegate.swift */,
 				FC25411824A31DEA006363CC /* SceneDelegate.swift */,
@@ -118,6 +126,23 @@
 				FC25413924A32FC3006363CC /* NowPlayingItem.xib */,
 			);
 			path = "Now Playing";
+			sourceTree = "<group>";
+		};
+		FC25413C24A342A0006363CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC25413D24A342C8006363CC /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC25413F24A342DC006363CC /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				FC25414024A342FC006363CC /* ApiService.swift */,
+				FC25414224A34488006363CC /* NowPlayingService.swift */,
+			);
+			path = Networks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,11 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC25414324A34488006363CC /* NowPlayingService.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
+				FC25413E24A342C8006363CC /* Movie.swift in Sources */,
 				FC25413624A32D30006363CC /* NowPlayingCell.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
 				FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */,
+				FC25414124A342FC006363CC /* ApiService.swift in Sources */,
 				FC25411924A31DEA006363CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,11 +15,25 @@ class NowPlayingCell: UITableViewCell {
 
     private let nibName = "NowPlayingItem"
 
+    private var data: Movie?
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupList()
+        fetchData()
+    }
+
+    private func setupList() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: nibName)
+    }
+
+    private func fetchData() {
+        ApiService.shared.getNowPlaying { (data) in
+            self.data = data
+            self.collectionView.reloadData()
+        }
     }
 
     @IBAction func btnSeeAllTapped(_ sender: Any) {
@@ -30,12 +44,16 @@ class NowPlayingCell: UITableViewCell {
 extension NowPlayingCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return data?.results?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: nibName, for: indexPath) as! NowPlayingItem
-        cell.txtLabel.text = "Item \(indexPath.row)"
+
+        if let item = data?.results {
+            cell.txtLabel.text = item[indexPath.row].title
+        }
+
         return cell
     }
 

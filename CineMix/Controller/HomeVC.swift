@@ -16,6 +16,10 @@ class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupList()
+    }
+
+    private func setupList() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: nibNowPlaying, bundle: nil), forCellReuseIdentifier: nibNowPlaying)
