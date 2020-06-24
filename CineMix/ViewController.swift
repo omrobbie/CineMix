@@ -12,5 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let apiKey = Config.apiKey {
+            print(apiKey)
+        }
     }
 }

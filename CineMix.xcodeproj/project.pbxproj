@@ -13,6 +13,9 @@
 		FC25411E24A31DEA006363CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25411C24A31DEA006363CC /* Main.storyboard */; };
 		FC25412024A31DEB006363CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC25411F24A31DEB006363CC /* Assets.xcassets */; };
 		FC25412324A31DEB006363CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC25412124A31DEB006363CC /* LaunchScreen.storyboard */; };
+		FC25412B24A31E45006363CC /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC25412A24A31E45006363CC /* Config.plist */; };
+		FC25412E24A31F2F006363CC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25412D24A31F2F006363CC /* Config.swift */; };
+		FC25413024A3263B006363CC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FC25412F24A3263B006363CC /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		FC25411F24A31DEB006363CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC25412224A31DEB006363CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC25412424A31DEB006363CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC25412A24A31E45006363CC /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		FC25412D24A31F2F006363CC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		FC25412F24A3263B006363CC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +66,22 @@
 				FC25411824A31DEA006363CC /* SceneDelegate.swift */,
 				FC25411A24A31DEA006363CC /* ViewController.swift */,
 				FC25411C24A31DEA006363CC /* Main.storyboard */,
+				FC25412C24A31EF4006363CC /* Utilities */,
 				FC25411F24A31DEB006363CC /* Assets.xcassets */,
 				FC25412124A31DEB006363CC /* LaunchScreen.storyboard */,
 				FC25412424A31DEB006363CC /* Info.plist */,
+				FC25412A24A31E45006363CC /* Config.plist */,
+				FC25412F24A3263B006363CC /* README.md */,
 			);
 			path = CineMix;
+			sourceTree = "<group>";
+		};
+		FC25412C24A31EF4006363CC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FC25412D24A31F2F006363CC /* Config.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +142,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC25412B24A31E45006363CC /* Config.plist in Resources */,
 				FC25412324A31DEB006363CC /* LaunchScreen.storyboard in Resources */,
+				FC25413024A3263B006363CC /* README.md in Resources */,
 				FC25412024A31DEB006363CC /* Assets.xcassets in Resources */,
 				FC25411E24A31DEA006363CC /* Main.storyboard in Resources */,
 			);
@@ -139,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC25411B24A31DEA006363CC /* ViewController.swift in Sources */,
+				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
 				FC25411924A31DEA006363CC /* SceneDelegate.swift in Sources */,
 			);
