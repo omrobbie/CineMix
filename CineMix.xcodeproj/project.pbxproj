@@ -23,6 +23,8 @@
 		FC25413E24A342C8006363CC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25413D24A342C8006363CC /* Movie.swift */; };
 		FC25414124A342FC006363CC /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414024A342FC006363CC /* ApiService.swift */; };
 		FC25414324A34488006363CC /* NowPlayingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414224A34488006363CC /* NowPlayingService.swift */; };
+		FC25414524A365FD006363CC /* MovieListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414424A365FD006363CC /* MovieListVC.swift */; };
+		FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414724A368DA006363CC /* MovieListDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		FC25413D24A342C8006363CC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FC25414024A342FC006363CC /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		FC25414224A34488006363CC /* NowPlayingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingService.swift; sourceTree = "<group>"; };
+		FC25414424A365FD006363CC /* MovieListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListVC.swift; sourceTree = "<group>"; };
+		FC25414724A368DA006363CC /* MovieListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				FC25413C24A342A0006363CC /* Model */,
 				FC25413124A329DC006363CC /* View */,
 				FC25413224A32A20006363CC /* Controller */,
+				FC25414624A368B7006363CC /* Protocols */,
 				FC25413F24A342DC006363CC /* Networks */,
 				FC25412C24A31EF4006363CC /* Utilities */,
 				FC25411624A31DEA006363CC /* AppDelegate.swift */,
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FC25411A24A31DEA006363CC /* HomeVC.swift */,
+				FC25414424A365FD006363CC /* MovieListVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +149,14 @@
 				FC25414224A34488006363CC /* NowPlayingService.swift */,
 			);
 			path = Networks;
+			sourceTree = "<group>";
+		};
+		FC25414624A368B7006363CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FC25414724A368DA006363CC /* MovieListDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +237,9 @@
 				FC25414324A34488006363CC /* NowPlayingService.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
+				FC25414524A365FD006363CC /* MovieListVC.swift in Sources */,
 				FC25413E24A342C8006363CC /* Movie.swift in Sources */,
+				FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */,
 				FC25413624A32D30006363CC /* NowPlayingCell.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
 				FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */,

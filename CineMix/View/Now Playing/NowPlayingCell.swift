@@ -13,6 +13,8 @@ class NowPlayingCell: UITableViewCell {
     @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var delegate: MovieListDelegate?
+
     private let nibName = "NowPlayingItem"
 
     private var data: Movie?
@@ -37,7 +39,7 @@ class NowPlayingCell: UITableViewCell {
     }
 
     @IBAction func btnSeeAllTapped(_ sender: Any) {
-        print(#function)
+        delegate?.seeAllMovies(type: .nowPlaying)
     }
 }
 
@@ -64,7 +66,7 @@ extension NowPlayingCell: UICollectionViewDelegate, UICollectionViewDataSource, 
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = data?.results?[indexPath.row] {
-            print(item.title ?? "")
+            delegate?.movieDetail(item: item)
         }
     }
 }

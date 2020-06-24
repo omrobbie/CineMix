@@ -34,7 +34,19 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: nibNowPlaying) as! NowPlayingCell
+        cell.delegate = self
         tableView.rowHeight  = 290
         return cell
+    }
+}
+
+extension HomeVC: MovieListDelegate {
+
+    func seeAllMovies(type: MovieType) {
+        performSegue(withIdentifier: "toMovieList", sender: self)
+    }
+
+    func movieDetail(item: MovieResult) {
+        performSegue(withIdentifier: "toMovieDetail", sender: self)
     }
 }
