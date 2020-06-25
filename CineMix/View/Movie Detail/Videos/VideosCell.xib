@@ -43,6 +43,10 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-Zg-4mn">
+                                <rect key="frame" x="86" y="54" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -112,6 +116,7 @@
                 <outlet property="txtSite" destination="fyJ-Vn-yxe" id="1vb-Pa-fZd"/>
                 <outlet property="txtType" destination="jrE-iW-qfq" id="3hZ-DZ-uXp"/>
                 <outlet property="webView" destination="m02-va-5Xi" id="Y3C-hw-fmY"/>
+                <outlet property="webViewIndicator" destination="ODb-Zg-4mn" id="e9Q-YX-1gm"/>
             </connections>
             <point key="canvasLocation" x="285.50724637681162" y="160.04464285714286"/>
         </tableViewCell>

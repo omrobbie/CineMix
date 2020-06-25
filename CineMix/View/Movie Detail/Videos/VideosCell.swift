@@ -19,6 +19,7 @@ class VideosCell: UITableViewCell {
     @IBOutlet weak var layerView: UIView!
     @IBOutlet weak var layerImage: UIImageView!
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var webViewIndicator: UIActivityIndicatorView!
 
     func parseData(item: VideosResults) {
         fetchImgThumbnail(path: item.key)
@@ -52,11 +53,26 @@ class VideosCell: UITableViewCell {
     @objc private func playVideo(_ sender: TapGesture) {
         guard let url = URL(string: "\(Constant.urlYouTube)\(sender.key)") else {return}
 
+
         webView.isHidden = false
-        webView.load(URLRequest(url: url))    }
+        webView.load(URLRequest(url: url))
+        webView.navigationDelegate = self
+        webViewIndicator.startAnimating()
+    }
 
     // MARK: - Pass value with gesture
     class TapGesture: UITapGestureRecognizer {
         var key = String()
+    }
+}
+
+extension VideosCell: WKNavigationDelegate {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webViewIndicator.stopAnimating()
+    }
+
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        webViewIndicator.stopAnimating()
     }
 }
