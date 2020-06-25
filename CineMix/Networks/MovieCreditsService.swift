@@ -38,4 +38,33 @@ extension ApiService {
             }
         }.resume()
     }
+
+    func getPersonDetail(personId: Int, completion: @escaping (Person) -> ()) {
+        guard var urlComponents = URLComponents(string: BASE_URL + PERSON + "/\(personId)") else {return}
+
+        urlComponents.queryItems = [
+            URLQueryItem(name: "api_key", value: apiKey)
+        ]
+
+        guard let url = urlComponents.url else {return}
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+
+            guard let data = data else {return}
+
+            do {
+                let json = try JSONDecoder().decode(Person.self, from: data)
+                DispatchQueue.main.async {
+                    completion(json)
+                }
+            } catch {
+                print(error.localizedDescription)
+                return
+            }
+        }.resume()
+    }
 }

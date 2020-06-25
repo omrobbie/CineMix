@@ -24,14 +24,12 @@ class CreditDetailVC: UIViewController {
         super.viewDidLoad()
         showData()
         setupList()
+        fetchData()
     }
 
     private func showData() {
         fetchImgPerson(path: data?.profile_path)
         txtName.text = data?.name
-        txtBirthDay.text = "Birthday: -"
-        txtBirthPlace.text = "Place of Birth: -"
-        txtBiography.text = "Biography"
     }
 
     private func fetchImgPerson(path: String?) {
@@ -48,6 +46,16 @@ class CreditDetailVC: UIViewController {
     private func setupList() {
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+
+    private func fetchData() {
+        guard let personId = data?.id else {return}
+
+        ApiService.shared.getPersonDetail(personId: personId) { (data) in
+            self.txtBirthDay.text = "Birthday: \(data.birthday?.toDateString() ?? "-")"
+            self.txtBirthPlace.text = "Place of Birth: \(data.place_of_birth ?? "-")"
+            self.txtBiography.text = data.biography ?? "-"
+        }
     }
 }
 
