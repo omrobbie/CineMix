@@ -12,6 +12,8 @@ class MoviesCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    private var data: [MovieResult]?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupList()
@@ -20,7 +22,10 @@ class MoviesCell: UITableViewCell {
     func fetchData(data: Cast?) {
         guard let personId = data?.id else {return}
 
-        print(personId)
+        ApiService.shared.getDiscover(genres: nil, people: "\(personId)") { (data) in
+            self.data = data.results
+            self.collectionView.reloadData()
+        }
     }
 
     private func setupList() {
@@ -33,11 +38,16 @@ class MoviesCell: UITableViewCell {
 extension MoviesCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return data?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Nib.moviesItem, for: indexPath) as! MoviesItem
+
+        if let item = data?[indexPath.row] {
+            cell.parseData(item: item)
+        }
+
         return cell
     }
 
