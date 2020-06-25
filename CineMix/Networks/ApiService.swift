@@ -24,6 +24,8 @@ struct ApiService {
     internal let CREDITS = "/credits"
     internal let PERSON = "/person"
     internal let DISCOVER = "/discover"
+    internal let GENRE = "/genre"
+    internal let LIST = "/list"
 
     internal let NOW_PLAYING = "/now_playing"
     internal let VIDEOS = "/videos"

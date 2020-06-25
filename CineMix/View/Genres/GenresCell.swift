@@ -12,10 +12,12 @@ class GenresCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    private var data: [Genre]?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupList()
-        backgroundColor = .systemRed
+        fetchData()
     }
 
     private func setupList() {
@@ -23,21 +25,39 @@ class GenresCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: Nib.genresItem, bundle: nil), forCellWithReuseIdentifier: Nib.genresItem)
     }
+
+    private func fetchData() {
+        ApiService.shared.getGenresMovie { (data) in
+            self.data = data
+            self.collectionView.reloadData()
+        }
+    }
 }
 
 extension GenresCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return data?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Nib.genresItem, for: indexPath) as! GenresItem
-        cell.backgroundColor = .systemYellow
+
+        if let item = data?[indexPath.row] {
+            cell.parseData(item: item)
+        }
+
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 68)
+        var width = 100
+
+        if let item = data?[indexPath.row],
+            let name = item.name {
+            width += name.count * 5
+        }
+
+        return CGSize(width: width, height: 68)
     }
 }

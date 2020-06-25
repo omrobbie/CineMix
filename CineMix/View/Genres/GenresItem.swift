@@ -10,4 +10,9 @@ import UIKit
 
 class GenresItem: UICollectionViewCell {
 
+    @IBOutlet weak var txtName: UILabel!
+
+    func parseData(item: Genre) {
+        txtName.text = item.name
+    }
 }
