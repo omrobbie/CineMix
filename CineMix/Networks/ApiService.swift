@@ -16,11 +16,13 @@ struct ApiService {
         return Config.apiKey ?? ""
     }()
 
-    internal let BASE_URL = "https://api.themoviedb.org/3/movie/"
+    internal let BASE_URL = "https://api.themoviedb.org/3"
     internal let IMAGE_URL = "https://image.tmdb.org/t/p/"
 
-    internal let NOW_PLAYING = "now_playing"
+    internal let MOVIE = "/movie"
     internal let CREDITS = "/credits"
+
+    internal let NOW_PLAYING = "/now_playing"
 }
 
 // MARK: - Download image

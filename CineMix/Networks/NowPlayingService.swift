@@ -11,7 +11,7 @@ import Foundation
 extension ApiService {
 
     func getNowPlaying(page: Int = 1, completion: @escaping (Movie) -> ()) {
-        guard var urlComponents = URLComponents(string: BASE_URL + NOW_PLAYING) else {return}
+        guard var urlComponents = URLComponents(string: BASE_URL + MOVIE + NOW_PLAYING) else {return}
 
         urlComponents.queryItems = [
             URLQueryItem(name: "api_key", value: apiKey),

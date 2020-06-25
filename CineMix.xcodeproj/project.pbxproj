@@ -44,6 +44,7 @@
 		FCFEC07224A460E300A19B54 /* MovieCreditsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC07124A460E300A19B54 /* MovieCreditsService.swift */; };
 		FCFEC07424A4861C00A19B54 /* CreditDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC07324A4861C00A19B54 /* CreditDetailVC.swift */; };
 		FCFEC07624A487C700A19B54 /* CreditDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC07524A487C700A19B54 /* CreditDetailDelegate.swift */; };
+		FCFEC07A24A493CD00A19B54 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC07924A493CD00A19B54 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		FCFEC07124A460E300A19B54 /* MovieCreditsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsService.swift; sourceTree = "<group>"; };
 		FCFEC07324A4861C00A19B54 /* CreditDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDetailVC.swift; sourceTree = "<group>"; };
 		FCFEC07524A487C700A19B54 /* CreditDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDetailDelegate.swift; sourceTree = "<group>"; };
+		FCFEC07924A493CD00A19B54 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			children = (
 				FC25413D24A342C8006363CC /* Movie.swift */,
 				FCFEC06F24A45E9100A19B54 /* Credits.swift */,
+				FCFEC07924A493CD00A19B54 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFEC07A24A493CD00A19B54 /* Person.swift in Sources */,
 				FC25414324A34488006363CC /* NowPlayingService.swift in Sources */,
 				FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,

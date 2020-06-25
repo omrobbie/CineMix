@@ -11,8 +11,7 @@ import Foundation
 extension ApiService {
 
     func getMovieCredits(movieId: Int, completion: @escaping ([Cast]?) -> ()) {
-
-        guard var urlComponents = URLComponents(string: BASE_URL + "\(movieId)" + CREDITS) else {return}
+        guard var urlComponents = URLComponents(string: BASE_URL + MOVIE + "/\(movieId)" + CREDITS) else {return}
 
         urlComponents.queryItems = [
             URLQueryItem(name: "api_key", value: apiKey)
