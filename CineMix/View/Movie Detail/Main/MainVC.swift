@@ -32,18 +32,29 @@ class MainVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Nib.overviewCell, bundle: nil), forCellReuseIdentifier: Nib.overviewCell)
+        tableView.register(UINib(nibName: Nib.topCreditCell, bundle: nil), forCellReuseIdentifier: Nib.topCreditCell)
     }
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Nib.overviewCell) as! OverviewCell
-        cell.txtOverview.text = data?.overview ?? ""
-        return cell
+        switch indexPath.row {
+        case 0:
+            tableView.rowHeight = UITableView.automaticDimension
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.overviewCell) as! OverviewCell
+            cell.txtOverview.text = data?.overview ?? ""
+            return cell
+        case 1:
+            tableView.rowHeight = 260
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.topCreditCell) as! TopCreditCell
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }

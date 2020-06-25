@@ -36,6 +36,10 @@
 		FCFEC06224A3821A00A19B54 /* ReviewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC06024A3821A00A19B54 /* ReviewsVC.xib */; };
 		FCFEC06524A4427600A19B54 /* OverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC06324A4427600A19B54 /* OverviewCell.swift */; };
 		FCFEC06624A4427600A19B54 /* OverviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC06424A4427600A19B54 /* OverviewCell.xib */; };
+		FCFEC06924A451E500A19B54 /* TopCreditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC06724A451E500A19B54 /* TopCreditCell.swift */; };
+		FCFEC06A24A451E500A19B54 /* TopCreditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC06824A451E500A19B54 /* TopCreditCell.xib */; };
+		FCFEC06D24A4552F00A19B54 /* TopCreditItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC06B24A4552F00A19B54 /* TopCreditItem.swift */; };
+		FCFEC06E24A4552F00A19B54 /* TopCreditItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC06C24A4552F00A19B54 /* TopCreditItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +74,10 @@
 		FCFEC06024A3821A00A19B54 /* ReviewsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsVC.xib; sourceTree = "<group>"; };
 		FCFEC06324A4427600A19B54 /* OverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCell.swift; sourceTree = "<group>"; };
 		FCFEC06424A4427600A19B54 /* OverviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCell.xib; sourceTree = "<group>"; };
+		FCFEC06724A451E500A19B54 /* TopCreditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCreditCell.swift; sourceTree = "<group>"; };
+		FCFEC06824A451E500A19B54 /* TopCreditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCreditCell.xib; sourceTree = "<group>"; };
+		FCFEC06B24A4552F00A19B54 /* TopCreditItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCreditItem.swift; sourceTree = "<group>"; };
+		FCFEC06C24A4552F00A19B54 /* TopCreditItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCreditItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +210,10 @@
 				FCFEC05624A3819500A19B54 /* MainVC.xib */,
 				FCFEC06324A4427600A19B54 /* OverviewCell.swift */,
 				FCFEC06424A4427600A19B54 /* OverviewCell.xib */,
+				FCFEC06724A451E500A19B54 /* TopCreditCell.swift */,
+				FCFEC06824A451E500A19B54 /* TopCreditCell.xib */,
+				FCFEC06B24A4552F00A19B54 /* TopCreditItem.swift */,
+				FCFEC06C24A4552F00A19B54 /* TopCreditItem.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -287,9 +299,11 @@
 				FC25412324A31DEB006363CC /* LaunchScreen.storyboard in Resources */,
 				FC25413B24A32FC3006363CC /* NowPlayingItem.xib in Resources */,
 				FCFEC06224A3821A00A19B54 /* ReviewsVC.xib in Resources */,
+				FCFEC06E24A4552F00A19B54 /* TopCreditItem.xib in Resources */,
 				FC25413024A3263B006363CC /* README.md in Resources */,
 				FCFEC05E24A3820200A19B54 /* VideosVC.xib in Resources */,
 				FC25413724A32D30006363CC /* NowPlayingCell.xib in Resources */,
+				FCFEC06A24A451E500A19B54 /* TopCreditCell.xib in Resources */,
 				FC25412024A31DEB006363CC /* Assets.xcassets in Resources */,
 				FCFEC06624A4427600A19B54 /* OverviewCell.xib in Resources */,
 				FC25411E24A31DEA006363CC /* Main.storyboard in Resources */,
@@ -306,6 +320,7 @@
 				FC25414324A34488006363CC /* NowPlayingService.swift in Sources */,
 				FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
+				FCFEC06D24A4552F00A19B54 /* TopCreditItem.swift in Sources */,
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
 				FC25414524A365FD006363CC /* MovieListVC.swift in Sources */,
 				FC25413E24A342C8006363CC /* Movie.swift in Sources */,
@@ -313,6 +328,7 @@
 				FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */,
 				FCFEC06124A3821A00A19B54 /* ReviewsVC.swift in Sources */,
 				FC25413624A32D30006363CC /* NowPlayingCell.swift in Sources */,
+				FCFEC06924A451E500A19B54 /* TopCreditCell.swift in Sources */,
 				FC25415024A37D56006363CC /* DateFormatter.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
 				FCFEC06524A4427600A19B54 /* OverviewCell.swift in Sources */,
