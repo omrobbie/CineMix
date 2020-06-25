@@ -77,7 +77,7 @@ extension CreditDetailVC: UITableViewDelegate, UITableViewDataSource {
             if let item = person {
                 cell.parseData(item: item)
             }
-            
+
             return cell
         case 1:
             tableView.rowHeight = 300

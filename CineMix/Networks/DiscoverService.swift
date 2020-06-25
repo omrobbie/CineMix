@@ -27,7 +27,6 @@ extension ApiService {
         }
 
         guard let url = urlComponents.url else {return}
-        print(url)
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {

@@ -18,6 +18,7 @@ struct ApiService {
 
     internal let BASE_URL = "https://api.themoviedb.org/3"
     internal let IMAGE_URL = "https://image.tmdb.org/t/p/"
+    internal let VIDEO_URL = "https://img.youtube.com/vi/"
 
     internal let MOVIE = "/movie"
     internal let CREDITS = "/credits"
@@ -25,6 +26,7 @@ struct ApiService {
     internal let DISCOVER = "/discover"
 
     internal let NOW_PLAYING = "/now_playing"
+    internal let VIDEOS = "/videos"
 }
 
 // MARK: - Download image
@@ -39,6 +41,23 @@ extension ApiService {
 
     func downloadImage(path: String, size: ImageSize = .large, completion: @escaping (Data) -> ()) {
         guard let url = URL(string: IMAGE_URL + size.rawValue + path) else {return}
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+
+            if let data = data {
+                DispatchQueue.main.async {
+                    completion(data)
+                }
+            }
+        }.resume()
+    }
+
+    func downloadVideoThumbnail(path: String, completion: @escaping (Data) -> ()) {
+        guard let url = URL(string: VIDEO_URL + path + "/0.jpg") else {return}
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {

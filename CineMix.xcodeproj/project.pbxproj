@@ -52,6 +52,10 @@
 		FCFEC08624A4A52500A19B54 /* MoviesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC08424A4A52500A19B54 /* MoviesItem.swift */; };
 		FCFEC08724A4A52500A19B54 /* MoviesItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC08524A4A52500A19B54 /* MoviesItem.xib */; };
 		FCFEC08924A4AB8300A19B54 /* DiscoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC08824A4AB8300A19B54 /* DiscoverService.swift */; };
+		FCFEC08C24A4BEF200A19B54 /* VideosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC08A24A4BEF200A19B54 /* VideosCell.swift */; };
+		FCFEC08D24A4BEF200A19B54 /* VideosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC08B24A4BEF200A19B54 /* VideosCell.xib */; };
+		FCFEC08F24A4C21000A19B54 /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC08E24A4C21000A19B54 /* Videos.swift */; };
+		FCFEC09124A4C48900A19B54 /* VideosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09024A4C48900A19B54 /* VideosService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +106,10 @@
 		FCFEC08424A4A52500A19B54 /* MoviesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesItem.swift; sourceTree = "<group>"; };
 		FCFEC08524A4A52500A19B54 /* MoviesItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesItem.xib; sourceTree = "<group>"; };
 		FCFEC08824A4AB8300A19B54 /* DiscoverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverService.swift; sourceTree = "<group>"; };
+		FCFEC08A24A4BEF200A19B54 /* VideosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCell.swift; sourceTree = "<group>"; };
+		FCFEC08B24A4BEF200A19B54 /* VideosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosCell.xib; sourceTree = "<group>"; };
+		FCFEC08E24A4C21000A19B54 /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
+		FCFEC09024A4C48900A19B54 /* VideosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +208,7 @@
 				FC25413D24A342C8006363CC /* Movie.swift */,
 				FCFEC06F24A45E9100A19B54 /* Credits.swift */,
 				FCFEC07924A493CD00A19B54 /* Person.swift */,
+				FCFEC08E24A4C21000A19B54 /* Videos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +220,7 @@
 				FC25414224A34488006363CC /* NowPlayingService.swift */,
 				FCFEC07124A460E300A19B54 /* MovieCreditsService.swift */,
 				FCFEC08824A4AB8300A19B54 /* DiscoverService.swift */,
+				FCFEC09024A4C48900A19B54 /* VideosService.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -254,6 +264,8 @@
 			children = (
 				FCFEC05B24A3820200A19B54 /* VideosVC.swift */,
 				FCFEC05C24A3820200A19B54 /* VideosVC.xib */,
+				FCFEC08A24A4BEF200A19B54 /* VideosCell.swift */,
+				FCFEC08B24A4BEF200A19B54 /* VideosCell.xib */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -339,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC25412B24A31E45006363CC /* Config.plist in Resources */,
+				FCFEC08D24A4BEF200A19B54 /* VideosCell.xib in Resources */,
 				FCFEC08724A4A52500A19B54 /* MoviesItem.xib in Resources */,
 				FCFEC05824A3819500A19B54 /* MainVC.xib in Resources */,
 				FC25412324A31DEB006363CC /* LaunchScreen.storyboard in Resources */,
@@ -369,9 +382,11 @@
 				FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
 				FCFEC07224A460E300A19B54 /* MovieCreditsService.swift in Sources */,
+				FCFEC08F24A4C21000A19B54 /* Videos.swift in Sources */,
 				FCFEC07424A4861C00A19B54 /* CreditDetailVC.swift in Sources */,
 				FCFEC06D24A4552F00A19B54 /* TopCreditItem.swift in Sources */,
 				FCFEC07E24A49E1500A19B54 /* BiographyCell.swift in Sources */,
+				FCFEC09124A4C48900A19B54 /* VideosService.swift in Sources */,
 				FCFEC07624A487C700A19B54 /* CreditDetailDelegate.swift in Sources */,
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
 				FC25414524A365FD006363CC /* MovieListVC.swift in Sources */,
@@ -381,6 +396,7 @@
 				FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */,
 				FCFEC06124A3821A00A19B54 /* ReviewsVC.swift in Sources */,
 				FC25413624A32D30006363CC /* NowPlayingCell.swift in Sources */,
+				FCFEC08C24A4BEF200A19B54 /* VideosCell.swift in Sources */,
 				FCFEC06924A451E500A19B54 /* TopCreditCell.swift in Sources */,
 				FC25415024A37D56006363CC /* DateFormatter.swift in Sources */,
 				FCFEC07024A45E9100A19B54 /* Credits.swift in Sources */,
