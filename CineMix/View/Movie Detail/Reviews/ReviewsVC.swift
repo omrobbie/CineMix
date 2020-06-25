@@ -14,6 +14,8 @@ class ReviewsVC: UIViewController {
     
     var data: MovieResult?
 
+    private var reviews: [ReviewsResults]?
+
     init(_ data: MovieResult?) {
         super.init(nibName: nil, bundle: nil)
         self.data = data
@@ -33,17 +35,30 @@ class ReviewsVC: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: Nib.reviewsCell, bundle: nil), forCellReuseIdentifier: Nib.reviewsCell)
     }
+
+    private func fetchData() {
+        guard let movieId = data?.id else {return}
+
+        ApiService.shared.getReviews(movieId: movieId) { (data) in
+            self.reviews = data
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension ReviewsVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return reviews?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Nib.reviewsCell) as! ReviewsCell
-        cell.txtContent.text = "Item \(indexPath.row)"
+
+        if let item = reviews?[indexPath.row] {
+            cell.parseData(item: item)
+        }
+
         return cell
     }
 }

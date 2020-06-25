@@ -59,6 +59,7 @@
 		FCFEC09624A4DF3E00A19B54 /* ReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09424A4DF3E00A19B54 /* ReviewsCell.swift */; };
 		FCFEC09724A4DF3E00A19B54 /* ReviewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC09524A4DF3E00A19B54 /* ReviewsCell.xib */; };
 		FCFEC09924A4E0B400A19B54 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09824A4E0B400A19B54 /* Reviews.swift */; };
+		FCFEC09B24A4E27400A19B54 /* ReviewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09A24A4E27400A19B54 /* ReviewsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		FCFEC09424A4DF3E00A19B54 /* ReviewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCell.swift; sourceTree = "<group>"; };
 		FCFEC09524A4DF3E00A19B54 /* ReviewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsCell.xib; sourceTree = "<group>"; };
 		FCFEC09824A4E0B400A19B54 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		FCFEC09A24A4E27400A19B54 /* ReviewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				FCFEC07124A460E300A19B54 /* MovieCreditsService.swift */,
 				FCFEC08824A4AB8300A19B54 /* DiscoverService.swift */,
 				FCFEC09024A4C48900A19B54 /* VideosService.swift */,
+				FCFEC09A24A4E27400A19B54 /* ReviewsService.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				FC25415024A37D56006363CC /* DateFormatter.swift in Sources */,
 				FCFEC07024A45E9100A19B54 /* Credits.swift in Sources */,
 				FCFEC08224A4A2B800A19B54 /* MoviesCell.swift in Sources */,
+				FCFEC09B24A4E27400A19B54 /* ReviewsService.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
 				FCFEC06524A4427600A19B54 /* OverviewCell.swift in Sources */,
 				FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */,
