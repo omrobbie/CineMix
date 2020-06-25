@@ -47,6 +47,7 @@ class CreditDetailVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Nib.biographyCell, bundle: nil), forCellReuseIdentifier: Nib.biographyCell)
+        tableView.register(UINib(nibName: Nib.moviesCell, bundle: nil), forCellReuseIdentifier: Nib.moviesCell)
     }
 
     private func fetchData() {
@@ -76,7 +77,12 @@ extension CreditDetailVC: UITableViewDelegate, UITableViewDataSource {
             if let item = person {
                 cell.parseData(item: item)
             }
-
+            
+            return cell
+        case 1:
+            tableView.rowHeight = 300
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.moviesCell) as! MoviesCell
+            cell.fetchData(data: data)
             return cell
         default:
             return UITableViewCell()
