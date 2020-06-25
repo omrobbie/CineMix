@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class VideosCell: UITableViewCell {
 
@@ -17,12 +18,15 @@ class VideosCell: UITableViewCell {
     @IBOutlet weak var txtType: UILabel!
     @IBOutlet weak var layerView: UIView!
     @IBOutlet weak var layerImage: UIImageView!
+    @IBOutlet weak var webView: WKWebView!
 
     func parseData(item: VideosResults) {
         fetchImgThumbnail(path: item.key)
         txtName.text = item.name
         txtSite.text = "Site: \(item.site ?? "-")"
         txtType.text = "Type: \(item.type ?? "-")"
+
+        setupGesture(key: item.key)
     }
 
     private func fetchImgThumbnail(path: String?) {
@@ -36,5 +40,23 @@ class VideosCell: UITableViewCell {
             self.layerView.isHidden = false
             self.layerImage.isHidden = false
         }
+    }
+
+    private func setupGesture(key: String?) {
+        guard let key = key else {return}
+        let tap = TapGesture(target: self, action: #selector(playVideo(_:)))
+        tap.key = key
+        layerView.addGestureRecognizer(tap)
+    }
+
+    @objc private func playVideo(_ sender: TapGesture) {
+        guard let url = URL(string: "\(Constant.urlYouTube)\(sender.key)") else {return}
+
+        webView.isHidden = false
+        webView.load(URLRequest(url: url))    }
+
+    // MARK: - Pass value with gesture
+    class TapGesture: UITapGestureRecognizer {
+        var key = String()
     }
 }

@@ -26,26 +26,38 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1pO-lG-l3Q">
                                 <rect key="frame" x="86" y="54" width="20" height="20"/>
                             </activityIndicatorView>
-                            <view hidden="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzb-ov-nTD">
-                                <rect key="frame" x="0.0" y="0.0" width="192" height="128"/>
-                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </view>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mlm-oI-Qdu">
                                 <rect key="frame" x="0.0" y="-2" width="192" height="132"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </imageView>
+                            <view hidden="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzb-ov-nTD">
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="128"/>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <wkWebView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m02-va-5Xi">
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1pO-lG-l3Q" firstAttribute="centerY" secondItem="dCP-Lj-fX6" secondAttribute="centerY" id="3XA-sO-jfV"/>
                             <constraint firstItem="zzb-ov-nTD" firstAttribute="top" secondItem="dCP-Lj-fX6" secondAttribute="top" id="3lA-rt-RVJ"/>
+                            <constraint firstAttribute="trailing" secondItem="m02-va-5Xi" secondAttribute="trailing" id="5er-9y-I8O"/>
                             <constraint firstItem="saY-Vw-IXx" firstAttribute="top" secondItem="dCP-Lj-fX6" secondAttribute="top" id="7Vm-fM-nEH"/>
                             <constraint firstItem="1pO-lG-l3Q" firstAttribute="centerX" secondItem="dCP-Lj-fX6" secondAttribute="centerX" id="7m9-i5-VjZ"/>
+                            <constraint firstItem="m02-va-5Xi" firstAttribute="leading" secondItem="dCP-Lj-fX6" secondAttribute="leading" id="CO8-QL-8Cv"/>
                             <constraint firstAttribute="trailing" secondItem="mlm-oI-Qdu" secondAttribute="trailing" id="EH7-N4-wBy"/>
                             <constraint firstItem="mlm-oI-Qdu" firstAttribute="leading" secondItem="dCP-Lj-fX6" secondAttribute="leading" id="FMO-vM-VDC"/>
                             <constraint firstItem="mlm-oI-Qdu" firstAttribute="top" secondItem="dCP-Lj-fX6" secondAttribute="top" id="IjH-Aq-DyB"/>
+                            <constraint firstItem="m02-va-5Xi" firstAttribute="top" secondItem="dCP-Lj-fX6" secondAttribute="top" id="JK4-Pn-jzt"/>
                             <constraint firstAttribute="bottom" secondItem="zzb-ov-nTD" secondAttribute="bottom" id="Ow9-fV-cOt"/>
+                            <constraint firstAttribute="bottom" secondItem="m02-va-5Xi" secondAttribute="bottom" id="cPC-03-Eiz"/>
                             <constraint firstAttribute="trailing" secondItem="zzb-ov-nTD" secondAttribute="trailing" id="hBO-iR-sqw"/>
                             <constraint firstItem="zzb-ov-nTD" firstAttribute="leading" secondItem="dCP-Lj-fX6" secondAttribute="leading" id="hm5-aw-GPm"/>
                             <constraint firstAttribute="bottom" secondItem="mlm-oI-Qdu" secondAttribute="bottom" id="kBh-MK-KFr"/>
@@ -99,6 +111,7 @@
                 <outlet property="txtName" destination="OID-dt-3AS" id="tkl-Cs-mJP"/>
                 <outlet property="txtSite" destination="fyJ-Vn-yxe" id="1vb-Pa-fZd"/>
                 <outlet property="txtType" destination="jrE-iW-qfq" id="3hZ-DZ-uXp"/>
+                <outlet property="webView" destination="m02-va-5Xi" id="Y3C-hw-fmY"/>
             </connections>
             <point key="canvasLocation" x="285.50724637681162" y="160.04464285714286"/>
         </tableViewCell>

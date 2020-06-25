@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct Constant {
+
+    static let urlYouTube = "https://www.youtube.com/embed/"
+}
+
 struct Nib {
 
     static let nowPlayingCell = "NowPlayingCell"
