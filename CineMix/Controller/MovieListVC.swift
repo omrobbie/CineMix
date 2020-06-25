@@ -16,7 +16,8 @@ class MovieListVC: UIViewController {
     var type: MovieType?
     var genre: Genre?
 
-    private var data: Movie?
+    private var movie: Movie?
+    private var data = [MovieResult]()
     private var page = 1
 
     override func viewDidLoad() {
@@ -67,7 +68,12 @@ class MovieListVC: UIViewController {
 
         tableViewIndicator.startAnimating()
         ApiService.shared.getDiscover(page: page, genres: "\(genreId)") { (data) in
-            self.data = data
+            self.movie = data
+
+            if let results = data.results {
+                self.data.append(contentsOf: results)
+            }
+
             self.tableView.reloadData()
             self.tableViewIndicator.stopAnimating()
         }
@@ -93,22 +99,29 @@ class MovieListVC: UIViewController {
 extension MovieListVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data?.results?.count ?? 0
+        return data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Nib.movieCell) as! MovieCell
 
-        if let item = data?.results?[indexPath.row] {
-            cell.parseData(item: item)
-        }
+        let item = data[indexPath.row]
+        cell.parseData(item: item)
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let item = data?.results?[indexPath.row] {
-            performSegue(withIdentifier: Segue.listToDetail, sender: item)
+        let item = data[indexPath.row]
+        performSegue(withIdentifier: Segue.listToDetail, sender: item)
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == data.count - 1 {
+            if movie?.total_pages ?? 1 > page {
+                page += 1
+                fetchData()
+            }
         }
     }
 }
