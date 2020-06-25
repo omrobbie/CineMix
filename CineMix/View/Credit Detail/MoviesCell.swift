@@ -22,7 +22,7 @@ class MoviesCell: UITableViewCell {
     func fetchData(data: Cast?) {
         guard let personId = data?.id else {return}
 
-        ApiService.shared.getDiscover(genres: nil, people: "\(personId)") { (data) in
+        ApiService.shared.getDiscover(people: "\(personId)") { (data) in
             self.data = data.results
             self.collectionView.reloadData()
         }

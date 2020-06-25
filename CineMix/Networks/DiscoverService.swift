@@ -10,7 +10,7 @@ import Foundation
 
 extension ApiService {
 
-    func getDiscover(page: Int = 1, genres: String?, people: String?, completion: @escaping (Movie) -> ()) {
+    func getDiscover(page: Int = 1, genres: String? = nil, people: String? = nil, completion: @escaping (Movie) -> ()) {
         guard var urlComponents = URLComponents(string: BASE_URL + DISCOVER + MOVIE) else {return}
 
         urlComponents.queryItems = [

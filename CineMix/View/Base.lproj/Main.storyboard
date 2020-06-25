@@ -62,9 +62,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="PJ8-tE-L7P">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="PJ8-tE-L7P" firstAttribute="centerX" secondItem="ayH-sB-7pL" secondAttribute="centerX" id="XO4-i4-cQD"/>
+                            <constraint firstItem="PJ8-tE-L7P" firstAttribute="centerY" secondItem="ayH-sB-7pL" secondAttribute="centerY" id="cWa-3Z-Qmn"/>
                             <constraint firstItem="HXD-b4-ywN" firstAttribute="top" secondItem="Dvk-Yj-9sQ" secondAttribute="top" id="eOe-RU-bzl"/>
                             <constraint firstItem="Dvk-Yj-9sQ" firstAttribute="trailing" secondItem="HXD-b4-ywN" secondAttribute="trailing" id="iPa-Cd-gJJ"/>
                             <constraint firstItem="Dvk-Yj-9sQ" firstAttribute="bottom" secondItem="HXD-b4-ywN" secondAttribute="bottom" id="m4z-6U-jVX"/>
@@ -75,11 +80,13 @@
                     <navigationItem key="navigationItem" title="Movie List" id="rXG-vS-JQw"/>
                     <connections>
                         <outlet property="tableView" destination="HXD-b4-ywN" id="TwH-fQ-Ye3"/>
+                        <outlet property="tableViewIndicator" destination="PJ8-tE-L7P" id="R9d-D6-Sg2"/>
+                        <segue destination="ADO-Ln-O3D" kind="show" identifier="listToDetail" id="9FH-TJ-m4A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVB-ak-Dm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="-184"/>
+            <point key="canvasLocation" x="1845" y="-209"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FTv-ap-wGw">
@@ -235,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bg-Lv-grl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844.9275362318842" y="480.80357142857139"/>
+            <point key="canvasLocation" x="1845" y="506"/>
         </scene>
         <!--Credit Detail-->
         <scene sceneID="W1g-nH-2zg">
@@ -339,6 +346,9 @@
             <point key="canvasLocation" x="2662.3188405797105" y="480.80357142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9FH-TJ-m4A"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

@@ -67,6 +67,8 @@
 		FCFEC0A824A4EB4800A19B54 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0A724A4EB4800A19B54 /* Genres.swift */; };
 		FCFEC0AA24A4EC2000A19B54 /* GenreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0A924A4EC2000A19B54 /* GenreService.swift */; };
 		FCFEC0AC24A4F13B00A19B54 /* GenreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0AB24A4F13B00A19B54 /* GenreDelegate.swift */; };
+		FCFEC0B024A4FA3A00A19B54 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0AE24A4FA3A00A19B54 /* MovieCell.swift */; };
+		FCFEC0B124A4FA3A00A19B54 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0AF24A4FA3A00A19B54 /* MovieCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +134,8 @@
 		FCFEC0A724A4EB4800A19B54 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		FCFEC0A924A4EC2000A19B54 /* GenreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreService.swift; sourceTree = "<group>"; };
 		FCFEC0AB24A4F13B00A19B54 /* GenreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDelegate.swift; sourceTree = "<group>"; };
+		FCFEC0AE24A4FA3A00A19B54 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		FCFEC0AF24A4FA3A00A19B54 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 				FC25411C24A31DEA006363CC /* Main.storyboard */,
 				FC25413324A32CE2006363CC /* Now Playing */,
 				FCFEC09C24A4E62800A19B54 /* Genres */,
+				FCFEC0AD24A4F98200A19B54 /* Movie List */,
 				FCFEC05324A3817000A19B54 /* Movie Detail */,
 				FCFEC07B24A49DE600A19B54 /* Credit Detail */,
 			);
@@ -333,6 +338,15 @@
 			path = Genres;
 			sourceTree = "<group>";
 		};
+		FCFEC0AD24A4F98200A19B54 /* Movie List */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC0AE24A4FA3A00A19B54 /* MovieCell.swift */,
+				FCFEC0AF24A4FA3A00A19B54 /* MovieCell.xib */,
+			);
+			path = "Movie List";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -406,6 +420,7 @@
 				FC25413724A32D30006363CC /* NowPlayingCell.xib in Resources */,
 				FCFEC06A24A451E500A19B54 /* TopCreditCell.xib in Resources */,
 				FC25412024A31DEB006363CC /* Assets.xcassets in Resources */,
+				FCFEC0B124A4FA3A00A19B54 /* MovieCell.xib in Resources */,
 				FCFEC06624A4427600A19B54 /* OverviewCell.xib in Resources */,
 				FC25411E24A31DEA006363CC /* Main.storyboard in Resources */,
 				FCFEC07F24A49E1500A19B54 /* BiographyCell.xib in Resources */,
@@ -459,6 +474,7 @@
 				FCFEC05D24A3820200A19B54 /* VideosVC.swift in Sources */,
 				FC25414124A342FC006363CC /* ApiService.swift in Sources */,
 				FC25411924A31DEA006363CC /* SceneDelegate.swift in Sources */,
+				FCFEC0B024A4FA3A00A19B54 /* MovieCell.swift in Sources */,
 				FC25414A24A36DE8006363CC /* Constants.swift in Sources */,
 				FCFEC08924A4AB8300A19B54 /* DiscoverService.swift in Sources */,
 			);
