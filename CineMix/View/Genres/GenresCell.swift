@@ -12,6 +12,8 @@ class GenresCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var delegate: GenreDelegate?
+
     private var data: [Genre]?
 
     override func awakeFromNib() {
@@ -59,5 +61,11 @@ extension GenresCell: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         }
 
         return CGSize(width: width, height: 68)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let item = data?[indexPath.row] {
+            delegate?.seeAllMovies(genre: item)
+        }
     }
 }

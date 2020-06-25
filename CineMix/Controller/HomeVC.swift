@@ -42,6 +42,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         case 1:
             tableView.rowHeight = 120
             let cell = tableView.dequeueReusableCell(withIdentifier: Nib.genresCell) as! GenresCell
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
@@ -49,18 +50,28 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension HomeVC: MovieListDelegate {
+extension HomeVC: MovieListDelegate, GenreDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segue.toMovieList {
             let vc = segue.destination as! MovieListVC
-            vc.type = sender as? MovieType
+
+            if sender is Genre {
+                vc.type = .genre
+                vc.genre = sender as? Genre
+            } else {
+                vc.type = sender as? MovieType
+            }
         }
 
         if segue.identifier == Segue.toMovieDetail {
             let vc = segue.destination as! MovieDetailVC
             vc.data = sender as? MovieResult
         }
+    }
+
+    func seeAllMovies(genre: Genre) {
+        performSegue(withIdentifier: Segue.toMovieList, sender: genre)
     }
 
     func seeAllMovies(type: MovieType) {

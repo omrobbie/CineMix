@@ -13,6 +13,7 @@ enum MovieType: String {
     case upComing = "Upcoming"
     case topRated = "Top Rated"
     case popular = "Popular"
+    case genre = "Genre: "
 }
 
 protocol MovieListDelegate {

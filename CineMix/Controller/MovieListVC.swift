@@ -13,11 +13,24 @@ class MovieListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var type: MovieType?
+    var genre: Genre?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = type?.rawValue
+        setupEnv()
         setupList()
+    }
+
+    private func setupEnv() {
+        guard var title = type?.rawValue else {return}
+
+        if type == .genre {
+            if let name = genre?.name {
+                title += name
+            }
+        }
+
+        self.title = title
     }
 
     private func setupList() {

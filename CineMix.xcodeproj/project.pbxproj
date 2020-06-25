@@ -66,6 +66,7 @@
 		FCFEC0A624A4E75A00A19B54 /* GenresItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0A424A4E75A00A19B54 /* GenresItem.xib */; };
 		FCFEC0A824A4EB4800A19B54 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0A724A4EB4800A19B54 /* Genres.swift */; };
 		FCFEC0AA24A4EC2000A19B54 /* GenreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0A924A4EC2000A19B54 /* GenreService.swift */; };
+		FCFEC0AC24A4F13B00A19B54 /* GenreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0AB24A4F13B00A19B54 /* GenreDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,7 @@
 		FCFEC0A424A4E75A00A19B54 /* GenresItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenresItem.xib; sourceTree = "<group>"; };
 		FCFEC0A724A4EB4800A19B54 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		FCFEC0A924A4EC2000A19B54 /* GenreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreService.swift; sourceTree = "<group>"; };
+		FCFEC0AB24A4F13B00A19B54 /* GenreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 			children = (
 				FC25414724A368DA006363CC /* MovieListDelegate.swift */,
 				FCFEC07524A487C700A19B54 /* CreditDetailDelegate.swift */,
+				FCFEC0AB24A4F13B00A19B54 /* GenreDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
 				FCFEC06524A4427600A19B54 /* OverviewCell.swift in Sources */,
 				FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */,
+				FCFEC0AC24A4F13B00A19B54 /* GenreDelegate.swift in Sources */,
 				FCFEC05D24A3820200A19B54 /* VideosVC.swift in Sources */,
 				FC25414124A342FC006363CC /* ApiService.swift in Sources */,
 				FC25411924A31DEA006363CC /* SceneDelegate.swift in Sources */,
