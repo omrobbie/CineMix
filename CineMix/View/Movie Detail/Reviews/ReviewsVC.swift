@@ -28,6 +28,7 @@ class ReviewsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupList()
+        fetchData()
     }
 
     private func setupList() {

@@ -26,6 +26,13 @@ class MovieListVC: UIViewController {
         fetchData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.listToDetail {
+            let vc = segue.destination as! MovieDetailVC
+            vc.data = sender as? MovieResult
+        }
+    }
+
     private func setupEnv() {
         guard var title = type?.rawValue else {return}
 
@@ -101,7 +108,7 @@ extension MovieListVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let item = data?.results?[indexPath.row] {
-            print(item.title ?? "")
+            performSegue(withIdentifier: Segue.listToDetail, sender: item)
         }
     }
 }
