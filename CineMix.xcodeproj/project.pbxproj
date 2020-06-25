@@ -60,6 +60,10 @@
 		FCFEC09724A4DF3E00A19B54 /* ReviewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC09524A4DF3E00A19B54 /* ReviewsCell.xib */; };
 		FCFEC09924A4E0B400A19B54 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09824A4E0B400A19B54 /* Reviews.swift */; };
 		FCFEC09B24A4E27400A19B54 /* ReviewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09A24A4E27400A19B54 /* ReviewsService.swift */; };
+		FCFEC0A124A4E66500A19B54 /* GenresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09F24A4E66500A19B54 /* GenresCell.swift */; };
+		FCFEC0A224A4E66500A19B54 /* GenresCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0A024A4E66500A19B54 /* GenresCell.xib */; };
+		FCFEC0A524A4E75A00A19B54 /* GenresItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0A324A4E75A00A19B54 /* GenresItem.swift */; };
+		FCFEC0A624A4E75A00A19B54 /* GenresItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0A424A4E75A00A19B54 /* GenresItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +122,10 @@
 		FCFEC09524A4DF3E00A19B54 /* ReviewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsCell.xib; sourceTree = "<group>"; };
 		FCFEC09824A4E0B400A19B54 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		FCFEC09A24A4E27400A19B54 /* ReviewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsService.swift; sourceTree = "<group>"; };
+		FCFEC09F24A4E66500A19B54 /* GenresCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresCell.swift; sourceTree = "<group>"; };
+		FCFEC0A024A4E66500A19B54 /* GenresCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenresCell.xib; sourceTree = "<group>"; };
+		FCFEC0A324A4E75A00A19B54 /* GenresItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresItem.swift; sourceTree = "<group>"; };
+		FCFEC0A424A4E75A00A19B54 /* GenresItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenresItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +190,7 @@
 				FC25412124A31DEB006363CC /* LaunchScreen.storyboard */,
 				FC25411C24A31DEA006363CC /* Main.storyboard */,
 				FC25413324A32CE2006363CC /* Now Playing */,
+				FCFEC09C24A4E62800A19B54 /* Genres */,
 				FCFEC05324A3817000A19B54 /* Movie Detail */,
 				FCFEC07B24A49DE600A19B54 /* Credit Detail */,
 			);
@@ -304,6 +313,17 @@
 			path = "Credit Detail";
 			sourceTree = "<group>";
 		};
+		FCFEC09C24A4E62800A19B54 /* Genres */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC09F24A4E66500A19B54 /* GenresCell.swift */,
+				FCFEC0A024A4E66500A19B54 /* GenresCell.xib */,
+				FCFEC0A324A4E75A00A19B54 /* GenresItem.swift */,
+				FCFEC0A424A4E75A00A19B54 /* GenresItem.xib */,
+			);
+			path = Genres;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,8 +388,10 @@
 				FCFEC05824A3819500A19B54 /* MainVC.xib in Resources */,
 				FC25412324A31DEB006363CC /* LaunchScreen.storyboard in Resources */,
 				FC25413B24A32FC3006363CC /* NowPlayingItem.xib in Resources */,
+				FCFEC0A624A4E75A00A19B54 /* GenresItem.xib in Resources */,
 				FCFEC06224A3821A00A19B54 /* ReviewsVC.xib in Resources */,
 				FCFEC06E24A4552F00A19B54 /* TopCreditItem.xib in Resources */,
+				FCFEC0A224A4E66500A19B54 /* GenresCell.xib in Resources */,
 				FC25413024A3263B006363CC /* README.md in Resources */,
 				FCFEC05E24A3820200A19B54 /* VideosVC.xib in Resources */,
 				FC25413724A32D30006363CC /* NowPlayingCell.xib in Resources */,
@@ -400,7 +422,9 @@
 				FCFEC07424A4861C00A19B54 /* CreditDetailVC.swift in Sources */,
 				FCFEC06D24A4552F00A19B54 /* TopCreditItem.swift in Sources */,
 				FCFEC07E24A49E1500A19B54 /* BiographyCell.swift in Sources */,
+				FCFEC0A524A4E75A00A19B54 /* GenresItem.swift in Sources */,
 				FCFEC09124A4C48900A19B54 /* VideosService.swift in Sources */,
+				FCFEC0A124A4E66500A19B54 /* GenresCell.swift in Sources */,
 				FCFEC09924A4E0B400A19B54 /* Reviews.swift in Sources */,
 				FCFEC07624A487C700A19B54 /* CreditDetailDelegate.swift in Sources */,
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,

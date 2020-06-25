@@ -21,20 +21,31 @@ class HomeVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Nib.nowPlayingCell, bundle: nil), forCellReuseIdentifier: Nib.nowPlayingCell)
+        tableView.register(UINib(nibName: Nib.genresCell, bundle: nil), forCellReuseIdentifier: Nib.genresCell)
     }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Nib.nowPlayingCell) as! NowPlayingCell
-        cell.delegate = self
-        tableView.rowHeight  = 290
-        return cell
+        tableView.rowHeight = UITableView.automaticDimension
+        switch indexPath.row {
+        case 0:
+            tableView.rowHeight = 290
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.nowPlayingCell) as! NowPlayingCell
+            cell.delegate = self
+            return cell
+        case 1:
+            tableView.rowHeight = 120
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.genresCell) as! GenresCell
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }
 
