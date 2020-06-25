@@ -39,7 +39,7 @@ class MovieDetailVC: UIViewController {
     }
 
     private func prepareSegmentationView() {
-        vcs.append(MainVC(data))
+        vcs.append(MainVC(data, delegate: self))
         vcs.append(VideosVC())
         vcs.append(ReviewsVC())
 
@@ -76,5 +76,19 @@ class MovieDetailVC: UIViewController {
 
     @IBAction func segmentationChanged(_ sender: UISegmentedControl) {
         viewContainer.bringSubviewToFront(vcs[sender.selectedSegmentIndex].view)
+    }
+}
+
+extension MovieDetailVC: CreditDetailDelegate {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.toCreditDetail {
+            let vc = segue.destination as! CreditDetailVC
+            vc.data = sender as? Cast
+        }
+    }
+
+    func creditDetail(item: Cast) {
+        performSegue(withIdentifier: Segue.toCreditDetail, sender: item)
     }
 }

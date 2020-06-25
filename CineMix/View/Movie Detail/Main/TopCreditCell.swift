@@ -12,6 +12,8 @@ class TopCreditCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
 
+    var delegate: CreditDetailDelegate?
+
     var data: [Cast]?
 
     override func awakeFromNib() {
@@ -38,7 +40,7 @@ class TopCreditCell: UITableViewCell {
 extension TopCreditCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return data?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,7 +59,7 @@ extension TopCreditCell: UICollectionViewDelegate, UICollectionViewDataSource, U
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let item = data?[indexPath.row] {
-            print(item.name ?? "")
+            delegate?.creditDetail(item: item)
         }
     }
 }

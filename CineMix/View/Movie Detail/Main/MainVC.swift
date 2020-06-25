@@ -12,11 +12,14 @@ class MainVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var delegate: CreditDetailDelegate?
+
     var data: MovieResult?
 
-    init(_ data: MovieResult?) {
+    init(_ data: MovieResult?, delegate: CreditDetailDelegate?) {
         super.init(nibName: nil, bundle: nil)
         self.data = data
+        self.delegate = delegate
     }
 
     required init?(coder: NSCoder) {
@@ -52,10 +55,18 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         case 1:
             tableView.rowHeight = 260
             let cell = tableView.dequeueReusableCell(withIdentifier: Nib.topCreditCell) as! TopCreditCell
+            cell.delegate = self
             cell.fetchData(data: data)
             return cell
         default:
             return UITableViewCell()
         }
+    }
+}
+
+extension MainVC: CreditDetailDelegate {
+
+    func creditDetail(item: Cast) {
+        delegate?.creditDetail(item: item)
     }
 }

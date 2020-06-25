@@ -21,5 +21,6 @@ struct Segue {
 
     static let toMovieList = "toMovieList"
     static let toMovieDetail = "toMovieDetail"
+    static let toCreditDetail = "toCreditDetail"
 }
 

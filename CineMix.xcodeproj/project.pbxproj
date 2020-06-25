@@ -42,6 +42,8 @@
 		FCFEC06E24A4552F00A19B54 /* TopCreditItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC06C24A4552F00A19B54 /* TopCreditItem.xib */; };
 		FCFEC07024A45E9100A19B54 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC06F24A45E9100A19B54 /* Credits.swift */; };
 		FCFEC07224A460E300A19B54 /* MovieCreditsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC07124A460E300A19B54 /* MovieCreditsService.swift */; };
+		FCFEC07424A4861C00A19B54 /* CreditDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC07324A4861C00A19B54 /* CreditDetailVC.swift */; };
+		FCFEC07624A487C700A19B54 /* CreditDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC07524A487C700A19B54 /* CreditDetailDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		FCFEC06C24A4552F00A19B54 /* TopCreditItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopCreditItem.xib; sourceTree = "<group>"; };
 		FCFEC06F24A45E9100A19B54 /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
 		FCFEC07124A460E300A19B54 /* MovieCreditsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsService.swift; sourceTree = "<group>"; };
+		FCFEC07324A4861C00A19B54 /* CreditDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDetailVC.swift; sourceTree = "<group>"; };
+		FCFEC07524A487C700A19B54 /* CreditDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDetailDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 				FC25411A24A31DEA006363CC /* HomeVC.swift */,
 				FC25414424A365FD006363CC /* MovieListVC.swift */,
 				FC25414B24A37141006363CC /* MovieDetailVC.swift */,
+				FCFEC07324A4861C00A19B54 /* CreditDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				FC25414724A368DA006363CC /* MovieListDelegate.swift */,
+				FCFEC07524A487C700A19B54 /* CreditDetailDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -327,7 +333,9 @@
 				FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
 				FCFEC07224A460E300A19B54 /* MovieCreditsService.swift in Sources */,
+				FCFEC07424A4861C00A19B54 /* CreditDetailVC.swift in Sources */,
 				FCFEC06D24A4552F00A19B54 /* TopCreditItem.swift in Sources */,
+				FCFEC07624A487C700A19B54 /* CreditDetailDelegate.swift in Sources */,
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
 				FC25414524A365FD006363CC /* MovieListVC.swift in Sources */,
 				FC25413E24A342C8006363CC /* Movie.swift in Sources */,
