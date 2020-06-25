@@ -80,7 +80,17 @@ class MovieListVC: UIViewController {
     }
 
     private func fetchDataNowPlaying() {
+        tableViewIndicator.startAnimating()
+        ApiService.shared.getNowPlaying(page: page) { (data) in
+            self.movie = data
 
+            if let results = data.results {
+                self.data.append(contentsOf: results)
+            }
+
+            self.tableView.reloadData()
+            self.tableViewIndicator.stopAnimating()
+        }
     }
 
     private func fetchDataUpComing() {
