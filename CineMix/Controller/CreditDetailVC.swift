@@ -15,10 +15,10 @@ class CreditDetailVC: UIViewController {
     @IBOutlet weak var txtName: UILabel!
     @IBOutlet weak var txtBirthDay: UILabel!
     @IBOutlet weak var txtBirthPlace: UILabel!
-    @IBOutlet weak var txtBiography: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
 
     var data: Cast?
+    var person: Person?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,29 +44,42 @@ class CreditDetailVC: UIViewController {
     }
 
     private func setupList() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: Nib.biographyCell, bundle: nil), forCellReuseIdentifier: Nib.biographyCell)
     }
 
     private func fetchData() {
         guard let personId = data?.id else {return}
 
         ApiService.shared.getPersonDetail(personId: personId) { (data) in
+            self.person = data
             self.txtBirthDay.text = "Birthday: \(data.birthday?.toDateString() ?? "-")"
             self.txtBirthPlace.text = "Place of Birth: \(data.place_of_birth ?? "-")"
-            self.txtBiography.text = data.biography ?? "-"
+            self.tableView.reloadData()
         }
     }
 }
 
-extension CreditDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CreditDetailVC: UITableViewDelegate, UITableViewDataSource {
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            tableView.rowHeight = UITableView.automaticDimension
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.biographyCell) as! BiographyCell
+
+            if let item = person {
+                cell.parseData(item: item)
+            }
+
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }

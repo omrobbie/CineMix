@@ -15,6 +15,7 @@ struct Nib {
     static let overviewCell = "OverviewCell"
     static let topCreditCell = "TopCreditCell"
     static let topCreditItem = "TopCreditItem"
+    static let biographyCell = "BiographyCell"
 }
 
 struct Segue {

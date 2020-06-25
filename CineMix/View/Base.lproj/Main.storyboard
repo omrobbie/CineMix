@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -306,74 +305,30 @@
                                     <constraint firstItem="bqk-Tv-u50" firstAttribute="leading" secondItem="n85-DE-emz" secondAttribute="trailing" constant="20" id="ukd-Wz-J3V"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as8-7V-xd9">
-                                <rect key="frame" x="20" y="359" width="374" height="27.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyt-GO-KOY">
-                                <rect key="frame" x="20" y="394.5" width="374" height="23.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzC-03-mxN">
-                                <rect key="frame" x="20" y="438" width="374" height="28"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uHZ-C6-itF">
-                                <rect key="frame" x="0.0" y="474" width="414" height="200"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="hTz-QC-h2T"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lWr-Qj-2yw">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="yRT-1X-sRN">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="M89-AY-XZJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.33333333329999998" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3qs-ay-oMQ">
+                                <rect key="frame" x="0.0" y="339" width="414" height="523"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nyt-GO-KOY" firstAttribute="top" secondItem="as8-7V-xd9" secondAttribute="bottom" constant="8" id="00z-nI-Qkd"/>
-                            <constraint firstItem="as8-7V-xd9" firstAttribute="top" secondItem="F2x-Il-NwW" secondAttribute="bottom" constant="20" id="1xN-sH-trr"/>
                             <constraint firstItem="0wM-94-jkI" firstAttribute="leading" secondItem="n85-DE-emz" secondAttribute="trailing" constant="20" id="4A9-of-3g4"/>
                             <constraint firstItem="F2x-Il-NwW" firstAttribute="leading" secondItem="Ogt-vP-gRf" secondAttribute="leading" id="5aH-fw-rbl"/>
-                            <constraint firstItem="mzC-03-mxN" firstAttribute="leading" secondItem="Ogt-vP-gRf" secondAttribute="leading" constant="20" id="6oE-Vg-8pz"/>
-                            <constraint firstItem="uHZ-C6-itF" firstAttribute="leading" secondItem="Ogt-vP-gRf" secondAttribute="leading" id="DLh-9h-9aR"/>
-                            <constraint firstItem="Ogt-vP-gRf" firstAttribute="trailing" secondItem="mzC-03-mxN" secondAttribute="trailing" constant="20" id="FCu-su-tiR"/>
+                            <constraint firstItem="3qs-ay-oMQ" firstAttribute="top" secondItem="F2x-Il-NwW" secondAttribute="bottom" id="Geu-ag-4H8"/>
                             <constraint firstItem="F2x-Il-NwW" firstAttribute="trailing" secondItem="Ogt-vP-gRf" secondAttribute="trailing" id="Gr5-zj-j5l"/>
-                            <constraint firstItem="uHZ-C6-itF" firstAttribute="top" secondItem="mzC-03-mxN" secondAttribute="bottom" constant="8" id="Ig9-7M-iqc"/>
+                            <constraint firstItem="3qs-ay-oMQ" firstAttribute="leading" secondItem="Ogt-vP-gRf" secondAttribute="leading" id="JmX-2x-aNo"/>
                             <constraint firstItem="F2x-Il-NwW" firstAttribute="top" secondItem="Ogt-vP-gRf" secondAttribute="top" id="KKO-JZ-n9J"/>
-                            <constraint firstItem="Ogt-vP-gRf" firstAttribute="trailing" secondItem="as8-7V-xd9" secondAttribute="trailing" constant="20" id="KQS-jl-y3G"/>
-                            <constraint firstItem="mzC-03-mxN" firstAttribute="top" secondItem="nyt-GO-KOY" secondAttribute="bottom" constant="20" id="SSt-aa-3PD"/>
-                            <constraint firstItem="Ogt-vP-gRf" firstAttribute="trailing" secondItem="nyt-GO-KOY" secondAttribute="trailing" constant="20" id="cId-IO-ZVN"/>
-                            <constraint firstItem="nyt-GO-KOY" firstAttribute="leading" secondItem="Ogt-vP-gRf" secondAttribute="leading" constant="20" id="ccH-US-3sQ"/>
+                            <constraint firstItem="Ogt-vP-gRf" firstAttribute="trailing" secondItem="3qs-ay-oMQ" secondAttribute="trailing" id="aAX-bF-R1G"/>
                             <constraint firstAttribute="trailing" secondItem="0wM-94-jkI" secondAttribute="trailing" constant="20" id="ePb-Vz-yc8"/>
-                            <constraint firstItem="as8-7V-xd9" firstAttribute="leading" secondItem="Ogt-vP-gRf" secondAttribute="leading" constant="20" id="fCn-n5-Yrk"/>
-                            <constraint firstItem="Ogt-vP-gRf" firstAttribute="trailing" secondItem="uHZ-C6-itF" secondAttribute="trailing" id="r2R-Dp-RoR"/>
+                            <constraint firstItem="Ogt-vP-gRf" firstAttribute="bottom" secondItem="3qs-ay-oMQ" secondAttribute="bottom" id="fHd-fJ-hM3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ogt-vP-gRf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Credit Detail" id="dZq-uM-Z1b"/>
                     <connections>
-                        <outlet property="collectionView" destination="uHZ-C6-itF" id="llL-2l-8dz"/>
                         <outlet property="imgPerson" destination="oRw-bd-eTy" id="5Xp-gc-Kmo"/>
                         <outlet property="imgPersonIndicator" destination="a1M-N1-7R2" id="zYJ-Bi-N1Q"/>
-                        <outlet property="txtBiography" destination="nyt-GO-KOY" id="MdA-Os-6PF"/>
+                        <outlet property="tableView" destination="3qs-ay-oMQ" id="Nma-7G-HYF"/>
                         <outlet property="txtBirthDay" destination="6PF-zd-v9r" id="bhN-0K-Wkz"/>
                         <outlet property="txtBirthPlace" destination="bqk-Tv-u50" id="h6o-IW-WKN"/>
                         <outlet property="txtName" destination="0wM-94-jkI" id="TDE-1n-eA9"/>
