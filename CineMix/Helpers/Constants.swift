@@ -24,6 +24,7 @@ struct Nib {
     static let moviesCell = "MoviesCell"
     static let moviesItem = "MoviesItem"
     static let videosCell = "VideosCell"
+    static let reviewsCell = "ReviewsCell"
 }
 
 struct Segue {

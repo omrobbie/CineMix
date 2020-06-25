@@ -41,7 +41,7 @@ class MovieDetailVC: UIViewController {
     private func prepareSegmentationView() {
         vcs.append(MainVC(data, delegate: self))
         vcs.append(VideosVC(data))
-        vcs.append(ReviewsVC())
+        vcs.append(ReviewsVC(data))
 
         vcs.forEach {
             addChild($0)

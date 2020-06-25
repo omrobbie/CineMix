@@ -56,6 +56,9 @@
 		FCFEC08D24A4BEF200A19B54 /* VideosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC08B24A4BEF200A19B54 /* VideosCell.xib */; };
 		FCFEC08F24A4C21000A19B54 /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC08E24A4C21000A19B54 /* Videos.swift */; };
 		FCFEC09124A4C48900A19B54 /* VideosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09024A4C48900A19B54 /* VideosService.swift */; };
+		FCFEC09624A4DF3E00A19B54 /* ReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09424A4DF3E00A19B54 /* ReviewsCell.swift */; };
+		FCFEC09724A4DF3E00A19B54 /* ReviewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC09524A4DF3E00A19B54 /* ReviewsCell.xib */; };
+		FCFEC09924A4E0B400A19B54 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC09824A4E0B400A19B54 /* Reviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +113,9 @@
 		FCFEC08B24A4BEF200A19B54 /* VideosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosCell.xib; sourceTree = "<group>"; };
 		FCFEC08E24A4C21000A19B54 /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
 		FCFEC09024A4C48900A19B54 /* VideosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosService.swift; sourceTree = "<group>"; };
+		FCFEC09424A4DF3E00A19B54 /* ReviewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsCell.swift; sourceTree = "<group>"; };
+		FCFEC09524A4DF3E00A19B54 /* ReviewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsCell.xib; sourceTree = "<group>"; };
+		FCFEC09824A4E0B400A19B54 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,7 @@
 				FCFEC06F24A45E9100A19B54 /* Credits.swift */,
 				FCFEC07924A493CD00A19B54 /* Person.swift */,
 				FCFEC08E24A4C21000A19B54 /* Videos.swift */,
+				FCFEC09824A4E0B400A19B54 /* Reviews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +282,8 @@
 			children = (
 				FCFEC05F24A3821A00A19B54 /* ReviewsVC.swift */,
 				FCFEC06024A3821A00A19B54 /* ReviewsVC.xib */,
+				FCFEC09424A4DF3E00A19B54 /* ReviewsCell.swift */,
+				FCFEC09524A4DF3E00A19B54 /* ReviewsCell.xib */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -367,6 +376,7 @@
 				FC25411E24A31DEA006363CC /* Main.storyboard in Resources */,
 				FCFEC07F24A49E1500A19B54 /* BiographyCell.xib in Resources */,
 				FCFEC08324A4A2B800A19B54 /* MoviesCell.xib in Resources */,
+				FCFEC09724A4DF3E00A19B54 /* ReviewsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,11 +392,13 @@
 				FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
 				FCFEC07224A460E300A19B54 /* MovieCreditsService.swift in Sources */,
+				FCFEC09624A4DF3E00A19B54 /* ReviewsCell.swift in Sources */,
 				FCFEC08F24A4C21000A19B54 /* Videos.swift in Sources */,
 				FCFEC07424A4861C00A19B54 /* CreditDetailVC.swift in Sources */,
 				FCFEC06D24A4552F00A19B54 /* TopCreditItem.swift in Sources */,
 				FCFEC07E24A49E1500A19B54 /* BiographyCell.swift in Sources */,
 				FCFEC09124A4C48900A19B54 /* VideosService.swift in Sources */,
+				FCFEC09924A4E0B400A19B54 /* Reviews.swift in Sources */,
 				FCFEC07624A487C700A19B54 /* CreditDetailDelegate.swift in Sources */,
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
 				FC25414524A365FD006363CC /* MovieListVC.swift in Sources */,
