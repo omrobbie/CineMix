@@ -17,16 +17,20 @@ class MovieDetailVC: UIViewController {
     @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var txtReleaseDate: UILabel!
     @IBOutlet weak var txtVote: UILabel!
+    @IBOutlet weak var viewContainer: UIView!
 
     var data: MovieResult?
+
+    private var views = [UIView]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         showData()
+        prepareSegmentationView()
     }
 
-    func showData() {
+    private func showData() {
         fetchImgBackdrop(path: data?.backdrop_path)
         fetchImgPoster(path: data?.poster_path)
         txtTitle.text = data?.title
@@ -34,7 +38,20 @@ class MovieDetailVC: UIViewController {
         txtVote.text = "\(data?.vote_average ?? 0.0)"
     }
 
-    func fetchImgBackdrop(path: String?) {
+    private func prepareSegmentationView() {
+        views.append(MainVC().view)
+        views.append(VideosVC().view)
+        views.append(ReviewsVC().view)
+
+        views.forEach {
+            $0.frame = view.frame
+            viewContainer.addSubview($0)
+        }
+
+        viewContainer.bringSubviewToFront(views[0])
+    }
+
+    private func fetchImgBackdrop(path: String?) {
         guard let path = path else {return}
 
         imgBackdropIndicator.startAnimating()
@@ -45,14 +62,18 @@ class MovieDetailVC: UIViewController {
         }
     }
 
-    func fetchImgPoster(path: String?) {
+    private func fetchImgPoster(path: String?) {
         guard let path = path else {return}
 
-        imgBackdropIndicator.startAnimating()
+        imgPosterIndicator.startAnimating()
         ApiService.shared.downloadImage(path: path) { (data) in
             self.imgPoster.image = UIImage(data: data)
             self.imgPoster.contentMode = .scaleAspectFill
             self.imgPosterIndicator.stopAnimating()
         }
+    }
+
+    @IBAction func segmentationChanged(_ sender: UISegmentedControl) {
+        viewContainer.bringSubviewToFront(views[sender.selectedSegmentIndex])
     }
 }

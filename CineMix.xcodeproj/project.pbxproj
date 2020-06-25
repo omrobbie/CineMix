@@ -28,6 +28,12 @@
 		FC25414A24A36DE8006363CC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414924A36DE8006363CC /* Constants.swift */; };
 		FC25414C24A37141006363CC /* MovieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414B24A37141006363CC /* MovieDetailVC.swift */; };
 		FC25415024A37D56006363CC /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25414F24A37D56006363CC /* DateFormatter.swift */; };
+		FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC05524A3819500A19B54 /* MainVC.swift */; };
+		FCFEC05824A3819500A19B54 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC05624A3819500A19B54 /* MainVC.xib */; };
+		FCFEC05D24A3820200A19B54 /* VideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC05B24A3820200A19B54 /* VideosVC.swift */; };
+		FCFEC05E24A3820200A19B54 /* VideosVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC05C24A3820200A19B54 /* VideosVC.xib */; };
+		FCFEC06124A3821A00A19B54 /* ReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC05F24A3821A00A19B54 /* ReviewsVC.swift */; };
+		FCFEC06224A3821A00A19B54 /* ReviewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC06024A3821A00A19B54 /* ReviewsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		FC25414924A36DE8006363CC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC25414B24A37141006363CC /* MovieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailVC.swift; sourceTree = "<group>"; };
 		FC25414F24A37D56006363CC /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		FCFEC05524A3819500A19B54 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		FCFEC05624A3819500A19B54 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		FCFEC05B24A3820200A19B54 /* VideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosVC.swift; sourceTree = "<group>"; };
+		FCFEC05C24A3820200A19B54 /* VideosVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosVC.xib; sourceTree = "<group>"; };
+		FCFEC05F24A3821A00A19B54 /* ReviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsVC.swift; sourceTree = "<group>"; };
+		FCFEC06024A3821A00A19B54 /* ReviewsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +130,7 @@
 				FC25412124A31DEB006363CC /* LaunchScreen.storyboard */,
 				FC25411C24A31DEA006363CC /* Main.storyboard */,
 				FC25413324A32CE2006363CC /* Now Playing */,
+				FCFEC05324A3817000A19B54 /* Movie Detail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +179,43 @@
 				FC25414724A368DA006363CC /* MovieListDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FCFEC05324A3817000A19B54 /* Movie Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC05424A3818200A19B54 /* Main */,
+				FCFEC05924A381D200A19B54 /* Videos */,
+				FCFEC05A24A381DC00A19B54 /* Reviews */,
+			);
+			path = "Movie Detail";
+			sourceTree = "<group>";
+		};
+		FCFEC05424A3818200A19B54 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC05524A3819500A19B54 /* MainVC.swift */,
+				FCFEC05624A3819500A19B54 /* MainVC.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FCFEC05924A381D200A19B54 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC05B24A3820200A19B54 /* VideosVC.swift */,
+				FCFEC05C24A3820200A19B54 /* VideosVC.xib */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		FCFEC05A24A381DC00A19B54 /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC05F24A3821A00A19B54 /* ReviewsVC.swift */,
+				FCFEC06024A3821A00A19B54 /* ReviewsVC.xib */,
+			);
+			path = Reviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC25412B24A31E45006363CC /* Config.plist in Resources */,
+				FCFEC05824A3819500A19B54 /* MainVC.xib in Resources */,
 				FC25412324A31DEB006363CC /* LaunchScreen.storyboard in Resources */,
 				FC25413B24A32FC3006363CC /* NowPlayingItem.xib in Resources */,
+				FCFEC06224A3821A00A19B54 /* ReviewsVC.xib in Resources */,
 				FC25413024A3263B006363CC /* README.md in Resources */,
+				FCFEC05E24A3820200A19B54 /* VideosVC.xib in Resources */,
 				FC25413724A32D30006363CC /* NowPlayingCell.xib in Resources */,
 				FC25412024A31DEB006363CC /* Assets.xcassets in Resources */,
 				FC25411E24A31DEA006363CC /* Main.storyboard in Resources */,
@@ -244,16 +297,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC25414324A34488006363CC /* NowPlayingService.swift in Sources */,
+				FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
 				FC25412E24A31F2F006363CC /* Config.swift in Sources */,
 				FC25414524A365FD006363CC /* MovieListVC.swift in Sources */,
 				FC25413E24A342C8006363CC /* Movie.swift in Sources */,
 				FC25414C24A37141006363CC /* MovieDetailVC.swift in Sources */,
 				FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */,
+				FCFEC06124A3821A00A19B54 /* ReviewsVC.swift in Sources */,
 				FC25413624A32D30006363CC /* NowPlayingCell.swift in Sources */,
 				FC25415024A37D56006363CC /* DateFormatter.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
 				FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */,
+				FCFEC05D24A3820200A19B54 /* VideosVC.swift in Sources */,
 				FC25414124A342FC006363CC /* ApiService.swift in Sources */,
 				FC25411924A31DEA006363CC /* SceneDelegate.swift in Sources */,
 				FC25414A24A36DE8006363CC /* Constants.swift in Sources */,

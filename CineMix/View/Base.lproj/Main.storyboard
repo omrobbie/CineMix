@@ -138,8 +138,8 @@
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                     </imageView>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="e6R-Ph-COh">
-                                        <rect key="frame" x="31.5" y="56.5" width="37" height="37"/>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="e6R-Ph-COh">
+                                        <rect key="frame" x="40" y="65" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -187,10 +187,12 @@
                                     <segment title="Videos"/>
                                     <segment title="Reviews"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentationChanged:" destination="ADO-Ln-O3D" eventType="valueChanged" id="n3R-vA-E5S"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUZ-Ad-u7M">
                                 <rect key="frame" x="0.0" y="511" width="414" height="351"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -226,6 +228,7 @@
                         <outlet property="txtReleaseDate" destination="9gm-xX-Fvj" id="i7g-l4-Woi"/>
                         <outlet property="txtTitle" destination="eC1-0G-TFk" id="ORb-vY-0ap"/>
                         <outlet property="txtVote" destination="ji1-4e-wky" id="FFm-DJ-f1X"/>
+                        <outlet property="viewContainer" destination="QUZ-Ad-u7M" id="J7S-rp-3Ws"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bg-Lv-grl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

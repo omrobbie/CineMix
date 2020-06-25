@@ -20,7 +20,7 @@ class MovieListVC: UIViewController {
         setupList()
     }
 
-    func setupList() {
+    private func setupList() {
         tableView.delegate = self
         tableView.dataSource = self
     }
