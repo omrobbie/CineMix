@@ -34,6 +34,8 @@
 		FCFEC05E24A3820200A19B54 /* VideosVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC05C24A3820200A19B54 /* VideosVC.xib */; };
 		FCFEC06124A3821A00A19B54 /* ReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC05F24A3821A00A19B54 /* ReviewsVC.swift */; };
 		FCFEC06224A3821A00A19B54 /* ReviewsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC06024A3821A00A19B54 /* ReviewsVC.xib */; };
+		FCFEC06524A4427600A19B54 /* OverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC06324A4427600A19B54 /* OverviewCell.swift */; };
+		FCFEC06624A4427600A19B54 /* OverviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC06424A4427600A19B54 /* OverviewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		FCFEC05C24A3820200A19B54 /* VideosVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosVC.xib; sourceTree = "<group>"; };
 		FCFEC05F24A3821A00A19B54 /* ReviewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsVC.swift; sourceTree = "<group>"; };
 		FCFEC06024A3821A00A19B54 /* ReviewsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsVC.xib; sourceTree = "<group>"; };
+		FCFEC06324A4427600A19B54 /* OverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCell.swift; sourceTree = "<group>"; };
+		FCFEC06424A4427600A19B54 /* OverviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,8 @@
 			children = (
 				FCFEC05524A3819500A19B54 /* MainVC.swift */,
 				FCFEC05624A3819500A19B54 /* MainVC.xib */,
+				FCFEC06324A4427600A19B54 /* OverviewCell.swift */,
+				FCFEC06424A4427600A19B54 /* OverviewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				FCFEC05E24A3820200A19B54 /* VideosVC.xib in Resources */,
 				FC25413724A32D30006363CC /* NowPlayingCell.xib in Resources */,
 				FC25412024A31DEB006363CC /* Assets.xcassets in Resources */,
+				FCFEC06624A4427600A19B54 /* OverviewCell.xib in Resources */,
 				FC25411E24A31DEA006363CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +315,7 @@
 				FC25413624A32D30006363CC /* NowPlayingCell.swift in Sources */,
 				FC25415024A37D56006363CC /* DateFormatter.swift in Sources */,
 				FC25411724A31DEA006363CC /* AppDelegate.swift in Sources */,
+				FCFEC06524A4427600A19B54 /* OverviewCell.swift in Sources */,
 				FC25413A24A32FC3006363CC /* NowPlayingItem.swift in Sources */,
 				FCFEC05D24A3820200A19B54 /* VideosVC.swift in Sources */,
 				FC25414124A342FC006363CC /* ApiService.swift in Sources */,

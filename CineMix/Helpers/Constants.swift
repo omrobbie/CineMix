@@ -12,6 +12,7 @@ struct Nib {
 
     static let nowPlayingCell = "NowPlayingCell"
     static let nowPlayingItem = "NowPlayingItem"
+    static let overviewCell = "OverviewCell"
 }
 
 struct Segue {

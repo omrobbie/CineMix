@@ -21,7 +21,7 @@ class MovieDetailVC: UIViewController {
 
     var data: MovieResult?
 
-    private var views = [UIView]()
+    private var vcs = [UIViewController]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,16 +39,17 @@ class MovieDetailVC: UIViewController {
     }
 
     private func prepareSegmentationView() {
-        views.append(MainVC().view)
-        views.append(VideosVC().view)
-        views.append(ReviewsVC().view)
+        vcs.append(MainVC(data))
+        vcs.append(VideosVC())
+        vcs.append(ReviewsVC())
 
-        views.forEach {
-            $0.frame = view.frame
-            viewContainer.addSubview($0)
+        vcs.forEach {
+            addChild($0)
+            $0.view.frame = viewContainer.bounds
+            viewContainer.addSubview($0.view)
         }
 
-        viewContainer.bringSubviewToFront(views[0])
+        viewContainer.bringSubviewToFront(vcs[0].view)
     }
 
     private func fetchImgBackdrop(path: String?) {
@@ -74,6 +75,6 @@ class MovieDetailVC: UIViewController {
     }
 
     @IBAction func segmentationChanged(_ sender: UISegmentedControl) {
-        viewContainer.bringSubviewToFront(views[sender.selectedSegmentIndex])
+        viewContainer.bringSubviewToFront(vcs[sender.selectedSegmentIndex].view)
     }
 }
