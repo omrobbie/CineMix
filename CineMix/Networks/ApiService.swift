@@ -20,6 +20,7 @@ struct ApiService {
     internal let IMAGE_URL = "https://image.tmdb.org/t/p/"
 
     internal let NOW_PLAYING = "now_playing"
+    internal let CREDITS = "/credits"
 }
 
 // MARK: - Download image

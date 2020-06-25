@@ -52,6 +52,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         case 1:
             tableView.rowHeight = 260
             let cell = tableView.dequeueReusableCell(withIdentifier: Nib.topCreditCell) as! TopCreditCell
+            cell.fetchData(data: data)
             return cell
         default:
             return UITableViewCell()
