@@ -27,18 +27,9 @@ class MovieCell: UITableViewCell {
         self.type = type
         txtTitle.text = type.rawValue
 
-        switch type {
-        case .nowPlaying:
-            ApiService.shared.getNowPlaying { (data) in
-                self.data = data
-                self.collectionView.reloadData()
-            }
-        case .upComing:
-            ApiService.shared.getUpComing { (data) in
-                self.data = data
-                self.collectionView.reloadData()
-            }
-        default: break
+        ApiService.shared.getMovieList(type: type) { (data) in
+            self.data = data
+            self.collectionView.reloadData()
         }
     }
 

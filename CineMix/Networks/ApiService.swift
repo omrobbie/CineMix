@@ -31,6 +31,8 @@ struct ApiService {
     internal let VIDEOS = "/videos"
     internal let REVIEWS = "/reviews"
     internal let UPCOMING = "/upcoming"
+    internal let TOP_RATED = "/top_rated"
+    internal let POPULAR = "/popular"
 }
 
 // MARK: - Download image

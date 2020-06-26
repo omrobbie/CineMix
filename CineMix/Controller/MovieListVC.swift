@@ -53,13 +53,10 @@ class MovieListVC: UIViewController {
     }
 
     private func fetchData() {
-        switch type {
-        case .genre: fetchDataGenre()
-        case .nowPlaying: fetchDataNowPlaying()
-        case .upComing: fetchDataUpComing()
-        case .topRated: fetchDataTopRated()
-        case .popular: fetchDataPopular()
-        default: break
+        if type == .genre {
+            fetchDataGenre()
+        } else {
+            fetchMovieList()
         }
     }
 
@@ -79,9 +76,11 @@ class MovieListVC: UIViewController {
         }
     }
 
-    private func fetchDataNowPlaying() {
+    private func fetchMovieList() {
+        guard let type = type else {return}
+        
         tableViewIndicator.startAnimating()
-        ApiService.shared.getNowPlaying(page: page) { (data) in
+        ApiService.shared.getMovieList(page: page, type: type) { (data) in
             self.movie = data
 
             if let results = data.results {
@@ -91,18 +90,6 @@ class MovieListVC: UIViewController {
             self.tableView.reloadData()
             self.tableViewIndicator.stopAnimating()
         }
-    }
-
-    private func fetchDataUpComing() {
-
-    }
-
-    private func fetchDataTopRated() {
-
-    }
-
-    private func fetchDataPopular() {
-
     }
 }
 

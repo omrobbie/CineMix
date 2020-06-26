@@ -50,6 +50,16 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             cell.delegate = self
             cell.fetchData(type: .upComing)
             return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.movieCell) as! MovieCell
+            cell.delegate = self
+            cell.fetchData(type: .topRated)
+            return cell
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.movieCell) as! MovieCell
+            cell.delegate = self
+            cell.fetchData(type: .popular)
+            return cell
         default:
             return UITableViewCell()
         }
