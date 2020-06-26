@@ -10,11 +10,12 @@ import Foundation
 
 extension ApiService {
 
-    func getReviews(movieId: Int, completion: @escaping ([ReviewsResults]?) -> ()) {
+    func getReviews(page: Int = 1, movieId: Int, completion: @escaping (Reviews) -> ()) {
         guard var urlComponents = URLComponents(string: BASE_URL + MOVIE + "/\(movieId)" + REVIEWS) else {return}
 
         urlComponents.queryItems = [
-            URLQueryItem(name: "api_key", value: apiKey)
+            URLQueryItem(name: "api_key", value: apiKey),
+            URLQueryItem(name: "page", value: "\(page)")
         ]
 
         guard let url = urlComponents.url else {return}
@@ -30,7 +31,7 @@ extension ApiService {
             do {
                 let json = try JSONDecoder().decode(Reviews.self, from: data)
                 DispatchQueue.main.async {
-                    completion(json.results)
+                    completion(json)
                 }
             } catch {
                 print(error.localizedDescription)

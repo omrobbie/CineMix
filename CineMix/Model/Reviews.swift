@@ -12,11 +12,11 @@ struct Reviews: Decodable {
 
     let page: Int
     let total_pages: Int
-    let results: [ReviewsResults]
+    let results: [ReviewsResults]?
 }
 
 struct ReviewsResults: Decodable {
 
-    let author: String
-    let content: String
+    let author: String?
+    let content: String?
 }

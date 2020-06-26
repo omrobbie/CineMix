@@ -14,7 +14,9 @@ class ReviewsVC: UIViewController {
     
     var data: MovieResult?
 
-    private var reviews: [ReviewsResults]?
+    private var reviews: Reviews?
+    private var reviewsResults = [ReviewsResults]()
+    private var page = 1
 
     init(_ data: MovieResult?) {
         super.init(nibName: nil, bundle: nil)
@@ -40,8 +42,13 @@ class ReviewsVC: UIViewController {
     private func fetchData() {
         guard let movieId = data?.id else {return}
 
-        ApiService.shared.getReviews(movieId: movieId) { (data) in
+        ApiService.shared.getReviews(page: page, movieId: movieId) { (data) in
             self.reviews = data
+
+            if let results = data.results {
+                self.reviewsResults.append(contentsOf: results)
+            }
+
             self.tableView.reloadData()
         }
     }
@@ -50,16 +57,27 @@ class ReviewsVC: UIViewController {
 extension ReviewsVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviews?.count ?? 0
+        return reviewsResults.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Nib.reviewsCell) as! ReviewsCell
+        let item = reviewsResults[indexPath.row]
+        cell.parseData(item: item)
+       return cell
+    }
 
-        if let item = reviews?[indexPath.row] {
-            cell.parseData(item: item)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = reviewsResults[indexPath.row]
+        print(item.author)
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == reviewsResults.count - 1 {
+            if reviews?.total_pages ?? 1 > page {
+                page += 1
+                fetchData()
+            }
         }
-
-        return cell
     }
 }

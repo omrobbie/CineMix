@@ -101,10 +101,8 @@ extension MovieListVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Nib.movieListCell) as! MovieListCell
-
         let item = data[indexPath.row]
         cell.parseData(item: item)
-
         return cell
     }
 
