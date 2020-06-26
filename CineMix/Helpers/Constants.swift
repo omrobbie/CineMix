@@ -15,8 +15,8 @@ struct Constant {
 
 struct Nib {
 
-    static let nowPlayingCell = "NowPlayingCell"
-    static let nowPlayingItem = "NowPlayingItem"
+    static let movieCell = "MovieCell"
+    static let movieItem = "MovieItem"
     static let overviewCell = "OverviewCell"
     static let topCreditCell = "TopCreditCell"
     static let topCreditItem = "TopCreditItem"
@@ -27,7 +27,7 @@ struct Nib {
     static let reviewsCell = "ReviewsCell"
     static let genresCell = "GenresCell"
     static let genresItem = "GenresItem"
-    static let movieCell = "MovieCell"
+    static let movieListCell = "MovieListCell"
 }
 
 struct Segue {

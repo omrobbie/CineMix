@@ -1,5 +1,5 @@
 //
-//  NowPlayingItem.swift
+//  MovieItem.swift
 //  CineMix
 //
 //  Created by omrobbie on 24/06/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NowPlayingItem: UICollectionViewCell {
+class MovieItem: UICollectionViewCell {
 
     @IBOutlet weak var imgBackdrop: UIImageView!
     @IBOutlet weak var imgBackdropIndicator: UIActivityIndicatorView!

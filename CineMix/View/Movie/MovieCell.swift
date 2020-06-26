@@ -1,5 +1,5 @@
 //
-//  NowPlayingCell.swift
+//  MovieCell.swift
 //  CineMix
 //
 //  Created by omrobbie on 24/06/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NowPlayingCell: UITableViewCell {
+class MovieCell: UITableViewCell {
 
     @IBOutlet weak var txtTitle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -45,7 +45,7 @@ class NowPlayingCell: UITableViewCell {
     private func setupList() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: Nib.nowPlayingItem, bundle: nil), forCellWithReuseIdentifier: Nib.nowPlayingItem)
+        collectionView.register(UINib(nibName: Nib.movieItem, bundle: nil), forCellWithReuseIdentifier: Nib.movieItem)
     }
 
     @IBAction func btnSeeAllTapped(_ sender: Any) {
@@ -55,14 +55,14 @@ class NowPlayingCell: UITableViewCell {
     }
 }
 
-extension NowPlayingCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension MovieCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data?.results?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Nib.nowPlayingItem, for: indexPath) as! NowPlayingItem
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Nib.movieItem, for: indexPath) as! MovieItem
 
         if let item = data?.results?[indexPath.row] {
             cell.parseData(item: item)

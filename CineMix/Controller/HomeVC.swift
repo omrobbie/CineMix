@@ -20,7 +20,7 @@ class HomeVC: UIViewController {
     private func setupList() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: Nib.nowPlayingCell, bundle: nil), forCellReuseIdentifier: Nib.nowPlayingCell)
+        tableView.register(UINib(nibName: Nib.movieCell, bundle: nil), forCellReuseIdentifier: Nib.movieCell)
         tableView.register(UINib(nibName: Nib.genresCell, bundle: nil), forCellReuseIdentifier: Nib.genresCell)
     }
 }
@@ -36,7 +36,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.nowPlayingCell) as! NowPlayingCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.movieCell) as! MovieCell
             cell.delegate = self
             cell.fetchData(type: .nowPlaying)
             return cell
@@ -46,7 +46,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             cell.delegate = self
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.nowPlayingCell) as! NowPlayingCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.movieCell) as! MovieCell
             cell.delegate = self
             cell.fetchData(type: .upComing)
             return cell

@@ -1,5 +1,5 @@
 //
-//  NowPlayingService.swift
+//  MovieService.swift
 //  CineMix
 //
 //  Created by omrobbie on 24/06/20.

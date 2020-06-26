@@ -1,5 +1,5 @@
 //
-//  MovieCell.swift
+//  MovieListCell.swift
 //  CineMix
 //
 //  Created by omrobbie on 25/06/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieCell: UITableViewCell {
+class MovieListCell: UITableViewCell {
 
     @IBOutlet weak var imgPoster: UIImageView!
     @IBOutlet weak var imgPosterIndicator: UIActivityIndicatorView!

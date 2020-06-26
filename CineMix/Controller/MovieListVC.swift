@@ -49,7 +49,7 @@ class MovieListVC: UIViewController {
     private func setupList() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: Nib.movieCell, bundle: nil), forCellReuseIdentifier: Nib.movieCell)
+        tableView.register(UINib(nibName: Nib.movieListCell, bundle: nil), forCellReuseIdentifier: Nib.movieListCell)
     }
 
     private func fetchData() {
@@ -113,7 +113,7 @@ extension MovieListVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Nib.movieCell) as! MovieCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Nib.movieListCell) as! MovieListCell
 
         let item = data[indexPath.row]
         cell.parseData(item: item)
