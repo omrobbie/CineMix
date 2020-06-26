@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="168" height="220"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivz-m2-g8j">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivz-m2-g8j">
                         <rect key="frame" x="20" y="20" width="128" height="128"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CEp-gT-ZDA">
@@ -38,6 +38,11 @@
                             <constraint firstAttribute="trailing" secondItem="CEp-gT-ZDA" secondAttribute="trailing" id="adU-ki-X4P"/>
                             <constraint firstItem="xBg-1H-dyg" firstAttribute="centerY" secondItem="Ivz-m2-g8j" secondAttribute="centerY" id="oBl-eb-KSI"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="64"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54C-8h-DpZ">
                         <rect key="frame" x="8" y="156" width="152" height="24"/>
@@ -56,7 +61,6 @@
             <constraints>
                 <constraint firstItem="FwZ-96-1LS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="4sd-R2-UqB"/>
                 <constraint firstItem="Ivz-m2-g8j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="FVH-GS-ffI"/>
-                <constraint firstAttribute="bottom" secondItem="FwZ-96-1LS" secondAttribute="bottom" constant="20" id="J9p-Wk-RwN"/>
                 <constraint firstAttribute="trailing" secondItem="FwZ-96-1LS" secondAttribute="trailing" constant="8" id="OcN-15-X9t"/>
                 <constraint firstItem="54C-8h-DpZ" firstAttribute="top" secondItem="Ivz-m2-g8j" secondAttribute="bottom" constant="8" id="SMc-tt-yEh"/>
                 <constraint firstItem="54C-8h-DpZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="TZF-rh-WgW"/>
@@ -64,6 +68,7 @@
                 <constraint firstAttribute="trailing" secondItem="54C-8h-DpZ" secondAttribute="trailing" constant="8" id="iWm-oV-x39"/>
                 <constraint firstItem="FwZ-96-1LS" firstAttribute="top" secondItem="54C-8h-DpZ" secondAttribute="bottom" constant="2" id="jXh-QE-U53"/>
                 <constraint firstItem="Ivz-m2-g8j" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="nwG-xD-iXR"/>
+                <constraint firstAttribute="bottom" secondItem="FwZ-96-1LS" secondAttribute="bottom" constant="20" id="qwD-Lb-wXx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="168" height="220"/>
