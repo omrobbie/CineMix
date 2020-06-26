@@ -238,11 +238,40 @@
                         <outlet property="txtVote" destination="ji1-4e-wky" id="FFm-DJ-f1X"/>
                         <outlet property="viewContainer" destination="QUZ-Ad-u7M" id="J7S-rp-3Ws"/>
                         <segue destination="s4d-HP-p9a" kind="show" identifier="toCreditDetail" id="4Lb-Zi-zhr"/>
+                        <segue destination="Pop-iZ-Kfn" kind="show" identifier="toReviewsDetail" id="wYU-tV-ko1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bg-Lv-grl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1845" y="506"/>
+        </scene>
+        <!--Reviews Detail-->
+        <scene sceneID="xi8-vS-SQH">
+            <objects>
+                <viewController id="Pop-iZ-Kfn" customClass="ReviewsDetailVC" customModule="CineMix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h10-F5-PQB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Cz-xY-t8h">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2BA-p3-1wT" firstAttribute="bottom" secondItem="9Cz-xY-t8h" secondAttribute="bottom" id="CFX-gD-k92"/>
+                            <constraint firstItem="9Cz-xY-t8h" firstAttribute="top" secondItem="2BA-p3-1wT" secondAttribute="top" id="FvE-F6-UME"/>
+                            <constraint firstItem="9Cz-xY-t8h" firstAttribute="leading" secondItem="2BA-p3-1wT" secondAttribute="leading" id="IKS-qh-vcO"/>
+                            <constraint firstItem="2BA-p3-1wT" firstAttribute="trailing" secondItem="9Cz-xY-t8h" secondAttribute="trailing" id="uL2-oM-6A1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BA-p3-1wT"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reviews Detail" id="Iv2-vy-6Cf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6r-oG-dN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="1223"/>
         </scene>
         <!--Credit Detail-->
         <scene sceneID="W1g-nH-2zg">
@@ -343,11 +372,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ei-pm-E0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2662.3188405797105" y="480.80357142857139"/>
+            <point key="canvasLocation" x="2667" y="506"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9FH-TJ-m4A"/>
+        <segue reference="cHQ-J5-Yju"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>

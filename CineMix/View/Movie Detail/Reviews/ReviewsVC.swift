@@ -11,6 +11,8 @@ import UIKit
 class ReviewsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+
+    var delegate: ReviewsDetailDelegate?
     
     var data: MovieResult?
 
@@ -18,9 +20,10 @@ class ReviewsVC: UIViewController {
     private var reviewsResults = [ReviewsResults]()
     private var page = 1
 
-    init(_ data: MovieResult?) {
+    init(_ data: MovieResult?, delegate: ReviewsDetailDelegate?) {
         super.init(nibName: nil, bundle: nil)
         self.data = data
+        self.delegate = delegate
     }
 
     required init?(coder: NSCoder) {
@@ -69,7 +72,7 @@ extension ReviewsVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = reviewsResults[indexPath.row]
-        print(item.author)
+        delegate?.reviewDetail(item: item)
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

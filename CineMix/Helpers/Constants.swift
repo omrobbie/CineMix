@@ -36,5 +36,6 @@ struct Segue {
     static let toMovieDetail = "toMovieDetail"
     static let toCreditDetail = "toCreditDetail"
     static let listToDetail = "listToDetail"
+    static let toReviewsDetail = "toReviewsDetail"
 }
 

@@ -69,6 +69,8 @@
 		FCFEC0AC24A4F13B00A19B54 /* GenreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0AB24A4F13B00A19B54 /* GenreDelegate.swift */; };
 		FCFEC0B024A4FA3A00A19B54 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0AE24A4FA3A00A19B54 /* MovieListCell.swift */; };
 		FCFEC0B124A4FA3A00A19B54 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0AF24A4FA3A00A19B54 /* MovieListCell.xib */; };
+		FCFEC0B824A5879D00A19B54 /* ReviewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0B724A5879D00A19B54 /* ReviewsDetailVC.swift */; };
+		FCFEC0BA24A5882000A19B54 /* ReviewsDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0B924A5882000A19B54 /* ReviewsDetailDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +138,8 @@
 		FCFEC0AB24A4F13B00A19B54 /* GenreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDelegate.swift; sourceTree = "<group>"; };
 		FCFEC0AE24A4FA3A00A19B54 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		FCFEC0AF24A4FA3A00A19B54 /* MovieListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
+		FCFEC0B724A5879D00A19B54 /* ReviewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsDetailVC.swift; sourceTree = "<group>"; };
+		FCFEC0B924A5882000A19B54 /* ReviewsDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsDetailDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 				FC25414424A365FD006363CC /* MovieListVC.swift */,
 				FC25414B24A37141006363CC /* MovieDetailVC.swift */,
 				FCFEC07324A4861C00A19B54 /* CreditDetailVC.swift */,
+				FCFEC0B724A5879D00A19B54 /* ReviewsDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				FC25414724A368DA006363CC /* MovieListDelegate.swift */,
 				FCFEC07524A487C700A19B54 /* CreditDetailDelegate.swift */,
 				FCFEC0AB24A4F13B00A19B54 /* GenreDelegate.swift */,
+				FCFEC0B924A5882000A19B54 /* ReviewsDetailDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 				FC25414324A34488006363CC /* MovieService.swift in Sources */,
 				FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
+				FCFEC0BA24A5882000A19B54 /* ReviewsDetailDelegate.swift in Sources */,
 				FCFEC07224A460E300A19B54 /* MovieCreditsService.swift in Sources */,
 				FCFEC09624A4DF3E00A19B54 /* ReviewsCell.swift in Sources */,
 				FCFEC08F24A4C21000A19B54 /* Videos.swift in Sources */,
@@ -461,6 +468,7 @@
 				FC25414824A368DA006363CC /* MovieListDelegate.swift in Sources */,
 				FCFEC06124A3821A00A19B54 /* ReviewsVC.swift in Sources */,
 				FC25413624A32D30006363CC /* MovieCell.swift in Sources */,
+				FCFEC0B824A5879D00A19B54 /* ReviewsDetailVC.swift in Sources */,
 				FCFEC08C24A4BEF200A19B54 /* VideosCell.swift in Sources */,
 				FCFEC06924A451E500A19B54 /* TopCreditCell.swift in Sources */,
 				FC25415024A37D56006363CC /* DateFormatter.swift in Sources */,

@@ -17,6 +17,7 @@ struct Reviews: Decodable {
 
 struct ReviewsResults: Decodable {
 
+    let id: String?
     let author: String?
     let content: String?
 }
