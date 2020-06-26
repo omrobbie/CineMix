@@ -21,3 +21,10 @@ struct ReviewsResults: Decodable {
     let author: String?
     let content: String?
 }
+
+struct ReviewsDetail: Decodable {
+
+    let author: String?
+    let media_title: String?
+    let content: String?
+}

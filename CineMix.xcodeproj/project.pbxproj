@@ -71,6 +71,8 @@
 		FCFEC0B124A4FA3A00A19B54 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0AF24A4FA3A00A19B54 /* MovieListCell.xib */; };
 		FCFEC0B824A5879D00A19B54 /* ReviewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0B724A5879D00A19B54 /* ReviewsDetailVC.swift */; };
 		FCFEC0BA24A5882000A19B54 /* ReviewsDetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0B924A5882000A19B54 /* ReviewsDetailDelegate.swift */; };
+		FCFEC0BE24A58ED700A19B54 /* ReviewsDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFEC0BC24A58ED700A19B54 /* ReviewsDetailCell.swift */; };
+		FCFEC0BF24A58ED700A19B54 /* ReviewsDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFEC0BD24A58ED700A19B54 /* ReviewsDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +142,8 @@
 		FCFEC0AF24A4FA3A00A19B54 /* MovieListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
 		FCFEC0B724A5879D00A19B54 /* ReviewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsDetailVC.swift; sourceTree = "<group>"; };
 		FCFEC0B924A5882000A19B54 /* ReviewsDetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsDetailDelegate.swift; sourceTree = "<group>"; };
+		FCFEC0BC24A58ED700A19B54 /* ReviewsDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsDetailCell.swift; sourceTree = "<group>"; };
+		FCFEC0BD24A58ED700A19B54 /* ReviewsDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsDetailCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,7 @@
 				FCFEC0AD24A4F98200A19B54 /* Movie List */,
 				FCFEC05324A3817000A19B54 /* Movie Detail */,
 				FCFEC07B24A49DE600A19B54 /* Credit Detail */,
+				FCFEC0BB24A58EAF00A19B54 /* Review Detail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +358,15 @@
 			path = "Movie List";
 			sourceTree = "<group>";
 		};
+		FCFEC0BB24A58EAF00A19B54 /* Review Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FCFEC0BC24A58ED700A19B54 /* ReviewsDetailCell.swift */,
+				FCFEC0BD24A58ED700A19B54 /* ReviewsDetailCell.xib */,
+			);
+			path = "Review Detail";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFEC0BF24A58ED700A19B54 /* ReviewsDetailCell.xib in Resources */,
 				FC25412B24A31E45006363CC /* Config.plist in Resources */,
 				FCFEC08D24A4BEF200A19B54 /* VideosCell.xib in Resources */,
 				FCFEC08724A4A52500A19B54 /* MoviesItem.xib in Resources */,
@@ -444,6 +459,7 @@
 			files = (
 				FCFEC07A24A493CD00A19B54 /* Person.swift in Sources */,
 				FC25414324A34488006363CC /* MovieService.swift in Sources */,
+				FCFEC0BE24A58ED700A19B54 /* ReviewsDetailCell.swift in Sources */,
 				FCFEC05724A3819500A19B54 /* MainVC.swift in Sources */,
 				FC25411B24A31DEA006363CC /* HomeVC.swift in Sources */,
 				FCFEC0BA24A5882000A19B54 /* ReviewsDetailDelegate.swift in Sources */,
