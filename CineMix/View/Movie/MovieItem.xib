@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="305" height="170"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrA-gF-toc">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrA-gF-toc">
                         <rect key="frame" x="8" y="8" width="289" height="154"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eM7-FG-Yb9">
@@ -56,6 +56,11 @@
                             <constraint firstAttribute="bottom" secondItem="OkY-Ro-RTW" secondAttribute="bottom" id="bbA-7D-UeK"/>
                             <constraint firstAttribute="trailing" secondItem="OkY-Ro-RTW" secondAttribute="trailing" id="q0K-oQ-iaV"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
