@@ -30,6 +30,7 @@ struct ApiService {
     internal let NOW_PLAYING = "/now_playing"
     internal let VIDEOS = "/videos"
     internal let REVIEWS = "/reviews"
+    internal let UPCOMING = "/upcoming"
 }
 
 // MARK: - Download image

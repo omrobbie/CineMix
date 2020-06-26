@@ -14,13 +14,32 @@ class NowPlayingCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
 
     var delegate: MovieListDelegate?
+    var type: MovieType?
 
     private var data: Movie?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setupList()
-        fetchData()
+    }
+
+    func fetchData(type: MovieType) {
+        self.type = type
+        txtTitle.text = type.rawValue
+
+        switch type {
+        case .nowPlaying:
+            ApiService.shared.getNowPlaying { (data) in
+                self.data = data
+                self.collectionView.reloadData()
+            }
+        case .upComing:
+            ApiService.shared.getUpComing { (data) in
+                self.data = data
+                self.collectionView.reloadData()
+            }
+        default: break
+        }
     }
 
     private func setupList() {
@@ -29,15 +48,10 @@ class NowPlayingCell: UITableViewCell {
         collectionView.register(UINib(nibName: Nib.nowPlayingItem, bundle: nil), forCellWithReuseIdentifier: Nib.nowPlayingItem)
     }
 
-    private func fetchData() {
-        ApiService.shared.getNowPlaying { (data) in
-            self.data = data
-            self.collectionView.reloadData()
-        }
-    }
-
     @IBAction func btnSeeAllTapped(_ sender: Any) {
-        delegate?.seeAllMovies(type: .nowPlaying)
+        if let type = type {
+            delegate?.seeAllMovies(type: type)
+        }
     }
 }
 

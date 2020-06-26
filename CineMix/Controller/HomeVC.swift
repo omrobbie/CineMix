@@ -32,17 +32,23 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = 290
+
         switch indexPath.row {
         case 0:
-            tableView.rowHeight = 290
             let cell = tableView.dequeueReusableCell(withIdentifier: Nib.nowPlayingCell) as! NowPlayingCell
             cell.delegate = self
+            cell.fetchData(type: .nowPlaying)
             return cell
         case 1:
             tableView.rowHeight = 120
             let cell = tableView.dequeueReusableCell(withIdentifier: Nib.genresCell) as! GenresCell
             cell.delegate = self
+            return cell
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Nib.nowPlayingCell) as! NowPlayingCell
+            cell.delegate = self
+            cell.fetchData(type: .upComing)
             return cell
         default:
             return UITableViewCell()

@@ -39,4 +39,35 @@ extension ApiService {
             }
         }.resume()
     }
+
+    func getUpComing(page: Int = 1, completion: @escaping (Movie) -> ()) {
+        guard var urlComponents = URLComponents(string: BASE_URL + MOVIE + UPCOMING) else {return}
+
+        urlComponents.queryItems = [
+            URLQueryItem(name: "api_key", value: apiKey),
+            URLQueryItem(name: "page", value: "\(page)")
+        ]
+
+        guard let url = urlComponents.url else {return}
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+
+            guard let data = data else {return}
+
+            do {
+                let json = try JSONDecoder().decode(Movie.self, from: data)
+                DispatchQueue.main.async {
+                    completion(json)
+                }
+            } catch {
+                print(error.localizedDescription)
+                return
+            }
+        }.resume()
+    }
+
 }
